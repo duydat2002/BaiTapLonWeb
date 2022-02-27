@@ -19,10 +19,10 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 html {
-    font-family: "Poppins", sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -82,6 +82,38 @@ button {
 .col-4 { width: 33.3333%; }
 .col-9 { width: 75%; }
 
+
+/* Button */
+.button {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 22px;
+    padding: 8px 20px;
+    text-align: center;
+    letter-spacing: 0.6px;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.button-bg {
+    background: #000;
+    color: #fff;
+}
+
+.button-bg:hover {
+    background: var(--green-color);
+    color: #000;
+}
+
+.button-gb {
+    background: var(--green-color);
+    color: #000;
+}
+
+.button-gb:hover {
+    background: #000;
+    color: #fff;
+}
 
 /*=============== HEADER & NAV ===============*/
 #header {
@@ -309,23 +341,26 @@ button {
     text-align: right;
 }
 
-.cart__view-btn {
-    padding: 10px 20px;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.8px;
-    background: var(--green-color);
-    border-radius: 25px;
-    transition: 0.5s;
-}
-
-.cart__view-btn:hover {
-    background: #000;
-    color: #fff;
-}
-
 .header-bottom { 
     background: var(--black-light-color);
+}
+
+.header-bottom.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    animation: slide-down 0.6s;
+    z-index: var(--z-fixed);
+}
+
+@keyframes slide-down {
+    0% {
+        top: -60px;
+    }
+    100% {
+        top: 0;
+    }
 }
 
 .header-bottom-container {
@@ -381,27 +416,110 @@ button {
     color: var(--green-color);
 }
 
+/*=============== Home Banner ===============*/
+.home-banner-item {
+    position: relative;
+}
 
+.home-banner__watermark { 
+    display: none;
+    /* position: absolute;
+    top: 50%;
+    left: 10px;
+    font-size: 100px;
+    transform: rotate(-90deg); */
+}
 
+.home-banner__text {
+    width: 350px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+.home-banner__sale {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+}
+
+.home-banner__title {
+    font-size: 35px;
+    letter-spacing: 0.8px;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.home-banner__desc {
+    font-size: 11px;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+}
+
+.slider-wrapper {
+    display: flex;
+}
+
+.slider-item {
+    flex: 0 0 100%;
+}
+
+.home-banner__slider .slider-navigation {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.home-banner__slider:hover .slider-navigation {
+    opacity: 1;
+}
+
+.slider-navigation .slider-prev,
+.slider-navigation .slider-next {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    font-size: 25px;
+    background: #000;
+    color: #fff;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.slider-navigation .slider-prev:hover,
+.slider-navigation .slider-next:hover {
+    background: #fff;
+    color: #000;
+}
+
+.home-banner__slider .slider-prev {
+    left: -5%;
+}
+
+.home-banner__slider .slider-next {
+    right: -5%;
+}
+
+.home-banner__slider:hover .slider-prev {
+    left: 5%;
+}
+
+.home-banner__slider:hover .slider-next {
+    right: 5%;
+}
 
 
 .cac {
     height: 1000px;
-}
-
-.header-bottom.active {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    animation: slide-down 0.6s;
-}
-
-@keyframes slide-down {
-    0% {
-        top: -60px;
-    }
-    100% {
-        top: 0;
-    }
 }

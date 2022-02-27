@@ -128,9 +128,9 @@ function slider(sliderText, transitionText, timeAuto) {
         isSliderRun = true;
         item.querySelector(".active")?.classList.remove("active");
         var activeIndex = slideIndex;
-        if (activeIndex == slideCount + 1)
+        if (activeIndex >= slideCount + 1)
             activeIndex = 1;
-        if (activeIndex == 0)
+        if (activeIndex <= 0)
             activeIndex = slideCount;
         item.children[activeIndex].classList.add("active");
 

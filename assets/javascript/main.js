@@ -97,7 +97,7 @@ function slider(sliderText, transitionText, timeAuto) {
         pagination.children[0].classList.add("active");
 
         item.addEventListener("transitionstart", () => {
-            const dotActiveIndex = item.children[slideIndex].dataset["index"];
+            const dotActiveIndex = item.children[slideIndex]?.dataset["index"];
             pagination.querySelector(".slider-dot.active").classList.remove("active");
             pagination.children[dotActiveIndex].classList.add("active");
         })
@@ -138,12 +138,12 @@ function slider(sliderText, transitionText, timeAuto) {
     
     item.addEventListener("transitionend", () => {
         isSliderRun = false;
-        if (slideIndex == slideCount + 1) {
+        if (slideIndex >= slideCount + 1) {
             slideIndex = 1;
             item.style.transition = "none";
             item.style.transform = `translateX(${-slideIndex*slideWidth}px)`;
             
-        } else if (slideIndex == 0) {
+        } else if (slideIndex <= 0) {
             slideIndex = slideCount;
             item.style.transition = "none";
             item.style.transform = `translateX(${-slideIndex*slideWidth}px)`;

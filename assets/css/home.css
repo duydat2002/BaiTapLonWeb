@@ -540,6 +540,7 @@ button {
     transition: 0.5s;
 }
 
+.slider-dot:hover,
 .slider-dot.active {
     background: #000;
 }

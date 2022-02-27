@@ -519,6 +519,32 @@ button {
     right: 5%;
 }
 
+.slider-pagination {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+}
+
+.slider-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.slider-dot.active {
+    background: #000;
+}
+
+
 
 .cac {
     height: 1000px;

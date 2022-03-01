@@ -154,7 +154,7 @@ window.onload = () => {
     //     })
     // }
 
-    function slider(sliderText, {navigation, pagination, loop = false, transitionText, timeAuto = 0, slidesPerView = 1, spaceBetween = 0}) {
+    function slider(sliderText, {navigation, pagination, loop = false, transitionText, timeAuto = 0, slidesPerView = 1, spaceBetween = 0, breakpoint}) {
         const sliderCotainer = document.querySelector(`${sliderText} .slider-container`);
         const sliderWrapper = sliderCotainer.querySelector(".slider-wrapper");
         const item = sliderCotainer.querySelector(".slider-wrapper");
@@ -162,6 +162,22 @@ window.onload = () => {
         const prev = document.querySelector(`${navigation} .slider-prev`);
         const next = document.querySelector(`${navigation} .slider-next`);
         const pagi = document.querySelector(pagination);
+        const defaultSlidesPerView = slidesPerView;
+        const defaultSpaceBetween = spaceBetween;
+        var defaultPoint;
+        if (breakpoint) {
+            for (var point in breakpoint) {
+                defaultPoint = point;
+            }
+            for (var point in breakpoint) {
+                if (window.innerWidth <= point) {
+                    slidesPerView = breakpoint[point].slidesPerView;
+                    spaceBetween = breakpoint[point].spaceBetween;
+                    break;
+                }
+            }
+        }
+
         var isPause = false;
         var isSliderRun = false;
         var slideIndex = 1;
@@ -171,8 +187,6 @@ window.onload = () => {
 
         //Slider Wrapper
         sliderWrapper.style.width = sliderCotainer.offsetWidth*(slideCount/slidesPerView) + "px";
-        
-        console.log(sliderCotainer.offsetWidth, slideCount, slidesPerView, spaceBetween, slideWidth, sliderWrapper.style.width);
 
         //Slider Item
         for (let i=0; i<slideCount; i++) {
@@ -188,12 +202,9 @@ window.onload = () => {
             sliderWrapper.style.transform = `translateX(${-slidesPerView*transformWidth}px)`;
 
             const sliderItemsAll = sliderCotainer.querySelectorAll(".slider-item");
-
             sliderItemsAll.forEach((item) => {
                 item.style.width = slideWidth + "px";
             });
-
-            console.log("resize", sliderCotainer.offsetWidth, slideCount, slidesPerView, spaceBetween, slideWidth, transformWidth, -slidesPerView*transformWidth);   
         })
 
         //Clone child
@@ -316,6 +327,41 @@ window.onload = () => {
                 item.style.transform = `translateX(${-slideIndex*transformWidth}px)`;
             }
         })
+
+        //Breakpoint
+        if (breakpoint) {
+            window.onresize = () => {
+                for (var point in breakpoint) {
+                    if (window.innerWidth <= point) {
+                        slidesPerView = breakpoint[point].slidesPerView;
+                        spaceBetween = breakpoint[point].spaceBetween;
+                        break;
+                    }
+                }
+                if (window.innerHeight > defaultPoint) {
+                    slidesPerView = defaultSlidesPerView;
+                    spaceBetween = defaultSpaceBetween;
+                }
+
+                slideWidth = (sliderCotainer.offsetWidth-(slidesPerView-1)*spaceBetween)/slidesPerView;
+                transformWidth = slideWidth + spaceBetween;
+                sliderWrapper.style.transform = `translateX(${-slidesPerView*transformWidth}px)`;
+                const sliderItemsAll = sliderCotainer.querySelectorAll(".slider-item");
+                sliderItemsAll.forEach((item) => {
+                    item.style.width = slideWidth + "px";
+                    item.style.marginRight = spaceBetween + "px";
+                });
+
+                console.log({
+                    sliderCotainer: sliderCotainer.offsetWidth,
+                    sliderWrapper: sliderWrapper.offsetWidth,
+                    slideWidth,
+                    transformWidth,
+                    slidesPerView,
+                    spaceBetween,
+                });
+            }
+        }
     }
 
     slider(".home-banner__slider", {
@@ -334,11 +380,23 @@ window.onload = () => {
         timeAuto: 5000,
         slidesPerView: 3,
         spaceBetween: 30,
+        breakpoint: {
+            // <= 500
+            500: {
+                slidesPerView: 1,
+                spaceBetween: 0
+            },
+            576: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            },
+        }
     })
 }
-
-
-
 
 
 

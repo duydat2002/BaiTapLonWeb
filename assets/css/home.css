@@ -610,6 +610,7 @@ button {
 
 .categories__img {
     position: relative;
+    width: 100%;
     overflow: hidden;
 }
 

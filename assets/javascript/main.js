@@ -82,7 +82,7 @@ function swiperSlider() {
         }
     });
 
-    const newProductSwiper = new Swiper('.product__slider .swiper', {
+    const newProductSwiper = new Swiper('.newproduct__slider .swiper', {
         loop: true,
         speed: 500,
         slidesPerView: 4,
@@ -95,6 +95,37 @@ function swiperSlider() {
         navigation: {
             nextEl: '.newproduct__container .swiper-next',
             prevEl: '.newproduct__container .swiper-prev',
+        },
+    });
+
+    const specialProductSwiper = new Swiper('.specialproduct__slider .swiper', {
+        loop: true,
+        speed: 500,
+        slidesPerView: 4,
+        spaceBetween: 30,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+        navigation: {
+            nextEl: '.specialproduct__container .swiper-next',
+            prevEl: '.specialproduct__container .swiper-prev',
+        },
+    });
+
+    const brandSwiper = new Swiper('.brand__slider .swiper', {
+        loop: true,
+        speed: 500,
+        slidesPerView: 6,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+        },
+        navigation: {
+            nextEl: '.brand__slider .swiper-next',
+            prevEl: '.brand__slider .swiper-prev',
         },
     });
 };

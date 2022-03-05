@@ -96,6 +96,9 @@ button {
 .col-2 { width: 16.6666%; }
 .col-3 { width: 25%; }
 .col-4 { width: 33.3333%; }
+.col-5 { width: 41.6666%; }
+.col-6 { width: 50%; }
+.col-8 { width: 66.6666%; }
 .col-9 { width: 75%; }
 
 
@@ -115,7 +118,6 @@ button {
     background: #000;
     color: #fff;
 }
-
 .button-bg:hover {
     background: var(--green-color);
     color: #000;
@@ -125,9 +127,17 @@ button {
     background: var(--green-color);
     color: #000;
 }
-
 .button-gb:hover {
     background: #000;
+    color: #fff;
+}
+
+.button-wg {
+    background: #fff;
+    color: #000;
+}
+.button-wg:hover {
+    background: var(--green-color);
     color: #fff;
 }
 
@@ -151,89 +161,26 @@ button {
 } 
 
 /* Navigation */
-.swiper-navigation .swiper-prev,
-.swiper-navigation .swiper-next {
-    position: absolute;
-    top: 50%;
-    display: flex;
+.swiper-prev, 
+.swiper-next {
+    display: flex !important;
     justify-content: center;
     align-items: center;
-    width: 45px;
-    height: 45px;
-    font-size: 25px;
+    width: 35px;
+    height: 35px;
+    background: var(--green-color);
+    color: #000;
+    border-radius: 50%;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.swiper-prev:hover, 
+.swiper-next:hover {
     background: #000;
     color: #fff;
-    border-radius: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-    transition: 0.5s;
-    cursor: pointer;
-}
-
-
-/* Type 1 */
-.navigation-swiper.type-1 {
-    display: none;
-    width: 35px;
-    height: 60px;
-    font-size: 20px;
-    background: rgba(0, 0, 0, 0.2);
-    color: #fff;
-    text-align: center;
-    line-height: 60px !important;
-}
-
-.swiper-container:hover .navigation-swiper.type-1 {
-    display: block;
-}
-
-.navigation-swiper.type-1:hover {
-    background: rgba(0, 0, 0, 0.3);
-}
-
-.navigation-prev.type-1 {
-    left: 0;
-    border-radius: 0 3px 3px 0;
-}
-
-.navigation-next.type-1 {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-/* Type 2 */
-.navigation-swiper.type-2 {
-    width: 25px;
-    height: 25px;
-    font-size: 12px;
-    background: #fff;
-    color: rgba(0, 0, 0, 0.6);
-    border-radius: 50%;
-    box-shadow: 0 1px 12px 0 rgb(0 0 0 / 12%);
-    text-align: center;
-    line-height: 25px !important;
-    transition: 0.3s;
-}
-
-.navigation-swiper.type-2:hover {
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-    line-height: 50px !important;
-}
-
-.navigation-swiper.type-2.swiper-button-disabled {
-    display: none;
-}
-
-.navigation-prev.type-2 {
-    left: 0;
-    transform: translate(-50%, -50%);
-}
-
-.navigation-next.type-2 {
-    right: 0;
-    transform: translate(50%, -50%);
 }
 
 /* ===== Product ===== */
@@ -351,10 +298,10 @@ button {
 
 .product__name {
     display: inline-block;
+    height: 42px;
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.2px;
-    margin-bottom: 10px;
     transition: 0.3s;
 }
 
@@ -717,13 +664,23 @@ button {
     right: 0;
     transform: translateY(-50%);
     z-index: 1;
-}
-.home-banner__slider .swiper-navigation {
     opacity: 0;
     transition: 0.5s;
 }
+
 .home-banner__slider:hover .swiper-navigation {
     opacity: 1;
+}
+
+.home-banner__slider .swiper-prev,
+.home-banner__slider .swiper-next {
+    position: absolute;
+    top: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 25px;
+    background: #000;
+    color: #fff;
 }
 
 .home-banner__slider .swiper-prev:hover,
@@ -928,7 +885,7 @@ button {
     align-items: center;
 }
 
-.service-item.hasSeperate {
+.service-item.has-separate {
     border-right: 1px solid #dbdbdb;
 }
 
@@ -996,7 +953,182 @@ button {
 /*=============== New Product ===============*/
 
 
+/*=============== Banner ===============*/
+.banner {
+    margin-top: 30px;
+}
 
+.banner-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-item::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    transition: 0.5s;
+}
+.banner-item:hover::before {
+    left: 100%;
+}
+
+.banner__row.row-2 {
+    margin-top: 30px;
+}
+
+.banner__img {
+    display: block;
+    height: 320px;
+}
+
+.banner__img img {
+    height: 100%;
+}
+
+.banner__text {
+    position: absolute;
+}
+
+.banner__text.text-1 {
+    top: 50%;
+    right: 60px;
+    transform: translateY(-50%);
+}
+
+.banner__text.text-2 {
+    top: 30px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #fff;
+}
+
+.banner__text-title {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.banner__text-discount {
+    font-size: 20px;
+    font-weight: 200;
+    text-transform: capitalize;
+}
+
+.banner__button {
+    margin-top: 40px;
+}
+
+.banner__text.text-2 .banner__button {
+    margin-top: 20px;
+}
+
+/*=============== Free Shipping ===============*/
+.freeshipping__container {
+    padding: 40px;
+    background: var(--green-color);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.freeshipping__container > div {
+    height: 48px;
+    vertical-align: middle;
+}
+
+.freeshipping__container .has-separate {
+    position: relative;
+    /* border-right: 1px solid var(--green-light-color); */
+}
+
+.freeshipping__container .has-separate::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 50px;
+    background: var(--green-light-color);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.freeshipping__title {
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.freeshipping__title i {
+    font-size: 40px;
+    transform: rotateY(180deg);
+}
+
+.freeshipping__desc {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.freeshipping__price {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+/*=============== Brand ===============*/
+.brand__container {
+    overflow-x: hidden;
+    padding: 20px 0;
+}
+
+.brand__slider .swiper {
+    overflow: visible;
+}
+
+.brand__img {
+    position: relative;
+    top: 0;
+    padding: 0 30px;
+    text-align: center;
+    opacity: 0.6;
+    transition: 0.5s;
+}
+
+.brand-item:hover .brand__img {
+    opacity: 1;
+    top: 5px;
+    animation: wave 1s ease-out 0.4s infinite alternate backwards;
+}
+
+.brand__img img {
+    width: auto;
+}
+
+.brand__navigation .swiper-prev,
+.brand__navigation .swiper-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+.brand__slider .swiper-prev {
+    left: -5%;
+}
+.brand__slider .swiper-next {
+    right: -5%;
+}
+.brand__slider:hover .swiper-prev {
+    left: 0;
+    opacity: 1;
+}
+.brand__slider:hover .swiper-next {
+    right: 0;
+    opacity: 1;
+}
 
 
 

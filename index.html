@@ -71,33 +71,45 @@
                             <span class="quickview__discount">Save 10%</span>
                         </div>
                         <p class="quickview__desc">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-                        <div class="quickview__action">
+                        <form action="#" method="get" class="quickview__action">
                             <div class="quickview__size">
                                 <span class="size__title action__title">Size</span>
                                 <div class="size__list action__list flex">
-                                    <div class="size-item action__item active">43mm</div>
-                                    <div class="size-item action__item">50mm</div>
+                                    <div class="size-item action__item active">
+                                        <input type="radio" name="size" value="43mm" class="action__input">
+                                        43mm
+                                    </div>
+                                    <div class="size-item action__item">
+                                        <input type="radio" name="size" value="50mm" class="action__input">
+                                        50mm
+                                    </div>
                                 </div>
                             </div>
                             <div class="quickview__color">
                                 <span class="color__title action__title">Color</span>
                                 <div class="color__list action__list flex">
-                                    <div class="color-item action__item active"></div>
-                                    <div class="color-item action__item"></div>
-                                    <div class="color-item action__item"></div>
+                                    <div class="color-item action__item active">
+                                        <input type="radio" name="color" value="white" class="action__input">
+                                    </div>
+                                    <div class="color-item action__item">
+                                        <input type="radio" name="color" value="red" class="action__input">
+                                    </div>
+                                    <div class="color-item action__item">
+                                        <input type="radio" name="color" value="black" class="action__input">
+                                    </div>
                                 </div>
                             </div>
                             <div class="quickview__quantity">
                                 <div class="quantity">
-                                    <input type="text" value="1" class="quantity__input">
+                                    <input type="text" name="qty" value="1" class="quantity__input">
                                     <div class="quantity__btns">
                                         <i class="fas fa-angle-up quantity-up"></i>
                                         <i class="fas fa-angle-down quantity-down"></i>
                                     </div>
                                 </div>
-                                <button class="button button-gb addCart">Add To Cart</button>
+                                <button type="submit" class="button button-gb addCart">Add To Cart</button>
                             </div>
-                        </div>
+                        </form>
                         <div class="quickview__social">
                             <a href="#" class="social-item facebook-icon">
                                 <i class="fab fa-facebook-f"></i>

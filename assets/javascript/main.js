@@ -128,6 +128,16 @@ function swiperSlider() {
             prevEl: '.brand__slider .swiper-prev',
         },
     });
+
+    const quickviewSwiper = new Swiper('.quickview__slider .swiper', {
+        speed: 500,
+        slidesPerView: 4,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.quickview__slider .swiper-next',
+            prevEl: '.quickview__slider .swiper-prev',
+        },
+    });
 };
 swiperSlider();
 
@@ -141,9 +151,74 @@ function star() {
         else
             star.classList.add("far","fa-star");
     })
-}
+};
 star();
 
+function quickview() {
+    const productQuickviews = document.querySelectorAll(".product__quickview");
+    const quickviewClose = document.querySelector(".quickview__close");
+    const modal = document.querySelector("#modal");
+    const quickview = document.querySelector("#quickview-modal");
+    
+    productQuickviews.forEach(item => {
+        item.onclick = () => {
+            modal.classList.add("active");
+            quickview.classList.add("active");
+            quickviewAction();
+        }
+    })
+    
+    quickviewClose.onclick = () =>  {
+        modal.classList.remove("active");
+        quickview.classList.remove("active");
+    }
 
+    function quickviewAction() {
+        const sizes = document.querySelectorAll(".quickview__action .size-item");
+        sizes.forEach(item => {
+            item.onclick = () => {
+                const sizeActive = document.querySelector(".quickview__action .size-item.active");
+    
+                sizeActive.classList.remove("active");
+                item.classList.add("active");
+            }
+        })
 
+        const colors = document.querySelectorAll(".quickview__action .color-item");
+        colors.forEach(item => {
+            item.onclick = () => {
+                const colorActive = document.querySelector(".quickview__action .color-item.active");
+    
+                colorActive.classList.remove("active");
+                item.classList.add("active");
+            }
+        })
+
+        const quantityInput = document.querySelector(".quickview__quantity .quantity__input");
+        const quantityUp = document.querySelector(".quickview__quantity .quantity-up");
+        const quantityDown = document.querySelector(".quickview__quantity .quantity-down");
+        quantityUp.onclick = () => {
+            const quantityNumber = parseInt(quantityInput.value);
+            quantityInput.value = quantityNumber + 1;
+        }
+        quantityDown.onclick = () => {
+            const quantityNumber = parseInt(quantityInput.value);
+            quantityInput.value = quantityNumber == 1 ? 1 : quantityNumber - 1;
+        }
+
+        const quickviewImg = document.querySelector(".quickview__mainimg > img");
+        const quickviewItems = document.querySelectorAll(".quickview-item");
+        quickviewItems.forEach(item => {
+            item.onclick = () => {
+                const quickviewActive = document.querySelector(".quickview-item.active");
+                const srcImg = item.querySelector("img").src;
+                
+                quickviewActive?.classList.remove("active");
+                item.classList.add("active");
+                quickviewImg.src = `${srcImg}`;
+            }
+        })
+    }
+};
+quickview();
 

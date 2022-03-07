@@ -30,7 +30,7 @@ function cartControl() {
         }
     }
 
-    
+
 };
 cartControl();
 
@@ -214,8 +214,7 @@ function modal() {
         quickviewClose.onclick = () =>  {
             modal.classList.remove("active");
             quickview.classList.remove("active");
-        }
-        modal.onclick
+        }  
     
         function quickviewAction() {
             const sizes = document.querySelectorAll(".quickview__action .size-item");
@@ -270,6 +269,7 @@ function modal() {
     function blockcartControl() {
         const productBlockcart = document.querySelectorAll(".product__cart");
         const blockcartClose = document.querySelector(".blockcart-modal .modal__close");
+        const blockcartContinue = document.querySelector(".blockcart-modal .blockcart__continueBtn");
         
         productBlockcart.forEach(item => {
             item.onclick = () => {
@@ -279,6 +279,10 @@ function modal() {
         })
         
         blockcartClose.onclick = () =>  {
+            modal.classList.remove("active");
+            blockcart.classList.remove("active");
+        }
+        blockcartContinue.onclick = () =>  {
             modal.classList.remove("active");
             blockcart.classList.remove("active");
         }

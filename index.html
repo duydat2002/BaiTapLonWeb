@@ -12,8 +12,17 @@
 </head>
 <body>
     <div id="modal">
+        <div id="wishlist-modal" class="wishlist-modal modal">
+            <div class="modal__close wishlist-modal-close">
+                <i class="fas fa-times"></i>
+            </div>
+            <p>The product was successfully added to your wishlist.</p>
+        </div>
         <div id="quickview-modal" class="quickview-modal modal">
-            <div class="quickview-model__container flex cl-gap">
+            <div class="quickview-modal__container flex cl-gap">        
+                <div class="modal__close">
+                    <i class="fas fa-times"></i>
+                </div>
                 <div class="col-6 pd-gap">
                     <div class="quickview__mainimg">
                         <img src="./assets/image/suunto-9-peak-granite-blue-titanium-1.png" alt="">
@@ -61,9 +70,6 @@
                 </div>
                 <div class="col-6 pd-gap">
                     <div class="quickview__detail">
-                        <div class="quickview__close">
-                            <i class="fas fa-times"></i>
-                        </div>
                         <h1 class="quickview__name">Suunto 9 Baro & Peak</h1>
                         <div class="quickview__price-box">
                             <span class="quickview__price">€530.34</span>
@@ -76,7 +82,7 @@
                                 <span class="size__title action__title">Size</span>
                                 <div class="size__list action__list flex">
                                     <div class="size-item action__item active">
-                                        <input type="radio" name="size" value="43mm" class="action__input">
+                                        <input type="radio" name="size" value="43mm" checked class="action__input">
                                         43mm
                                     </div>
                                     <div class="size-item action__item">
@@ -89,7 +95,7 @@
                                 <span class="color__title action__title">Color</span>
                                 <div class="color__list action__list flex">
                                     <div class="color-item action__item active">
-                                        <input type="radio" name="color" value="white" class="action__input">
+                                        <input type="radio" name="color" value="white" checked class="action__input">
                                     </div>
                                     <div class="color-item action__item">
                                         <input type="radio" name="color" value="red" class="action__input">
@@ -128,6 +134,70 @@
                 </div>
             </div>
         </div>
+        <div id="blockcart-modal" class="blockcart-modal modal">
+            <div class="blockcart__container">
+                <div class="modal__close">
+                    <i class="fas fa-times"></i>
+                </div>
+                <h3 class="blockcart__title">
+                    <i class="fas fa-check"></i>
+                    Product successfully added to your shopping cart
+                </h3>
+                <div class="blockcart__body flex cl-gap">
+                    <div class="col-6 pd-gap">
+                        <div class="blockcart__body-left flex">
+                            <div class="col-6 pd-gap">
+                                <div class="blockcart__img">
+                                    <img src="./assets/image/suunto-9-peak-granite-blue-titanium-1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-6 pd-gap">
+                                <div class="blockcart__info">
+                                    <h3 class="blockcart__name">Suunto 9 Baro & Peak</h3>
+                                    <div class="blockcart__price-box">
+                                        <span class="blockcart__price">€530.34</span>
+                                        <span class="blockcart__price-sale">€477.30</span>
+                                    </div>
+                                    <p class="blockcart__label blockcart__size">
+                                        Size:
+                                        <span>43mm</span>
+                                    </p>
+                                    <p class="blockcart__label blockcart__color">
+                                        Color:
+                                        <span>Black</span>
+                                    </p>
+                                    <p class="blockcart__label blockcart__qty">
+                                        Quantitu:
+                                        <span>1</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 pd-gap">
+                        <div class="blockcart__body-right">
+                            <p class="blockcart__count">There are <span>3</span> items in your cart.</p>
+                            <p class="blockcart__subtotal">
+                                Subtotal:
+                                <span>€485.00</span>
+                            </p>
+                            <p class="blockcart__shipping">
+                                shipping:
+                                <span>Free</span>
+                            </p>
+                            <p class="blockcart__total">
+                                Total:
+                                <span>€485.00</span>
+                            </p>    
+                            <div class="blockcart__btns">
+                                <a href="#" class="button button-gb">Continue Shopping</a>
+                                <a href="#" class="button button-bg">Proceed to checkout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <header id="header">
         <div class="header-top">
@@ -156,10 +226,10 @@
                         </div>
                     </div>
                     <div class="header__cart">
-                        <a href="#" class="cart__link">
+                        <div class="cart__link">
                             <i class="fas fa-shopping-cart cart__icon"></i>
                             <span class="cart__count">3</span>
-                        </a>
+                        </div>
                         <div class="cart__dropdown">
                             <div class="cart__scroll">
                                 <div class="cart__item flex">
@@ -419,16 +489,16 @@
                                             <img src="./assets/image/suunto-spartan-trainer-wrist-hr-black-techwear-2.png" alt="" class="img-secondary">
                                         </a>
                                         <div class="product__functions">
-                                            <a href="#" class="product__wishlish">
+                                            <div class="product__wishlist">
                                                 <i class="fas fa-heart"></i>
-                                            </a>
-                                            <a href="#"class="product__quickview">
+                                            </div>
+                                            <div class="product__quickview">
                                                 <i class="fas fa-eye"></i>
-                                            </a>
-                                            <a href="#"class="product__cart">
+                                            </div>
+                                            <div class="product__cart">
                                                 <i class="fas fa-shopping-cart"></i>
     
-                                            </a>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="product__desc">
@@ -457,16 +527,16 @@
                                             <img src="./assets/image/suunto-9-peak-granite-blue-titanium-2.png" alt="" class="img-secondary">
                                         </a>
                                         <div class="product__functions">
-                                            <a href="#" class="product__wishlish">
+                                            <div class="product__wishlist">
                                                 <i class="fas fa-heart"></i>
-                                            </a>
-                                            <a href="#"class="product__quickview">
+                                            </div>
+                                            <div class="product__quickview">
                                                 <i class="fas fa-eye"></i>
-                                            </a>
-                                            <a href="#"class="product__cart">
+                                            </div>
+                                            <div class="product__cart">
                                                 <i class="fas fa-shopping-cart"></i>
     
-                                            </a>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="product__desc">
@@ -495,16 +565,16 @@
                                             <img src="./assets/image/archetype-nemesis-automatic-2.jpg" alt="" class="img-secondary">
                                         </a>
                                         <div class="product__functions">
-                                            <a href="#" class="product__wishlish">
+                                            <div class="product__wishlist">
                                                 <i class="fas fa-heart"></i>
-                                            </a>
-                                            <a href="#"class="product__quickview">
+                                            </div>
+                                            <div class="product__quickview">
                                                 <i class="fas fa-eye"></i>
-                                            </a>
-                                            <a href="#"class="product__cart">
+                                            </div>
+                                            <div class="product__cart">
                                                 <i class="fas fa-shopping-cart"></i>
     
-                                            </a>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="product__desc">
@@ -533,16 +603,16 @@
                                             <img src="./assets/image/devon-tread-1E-2.jpg" alt="" class="img-secondary">
                                         </a>
                                         <div class="product__functions">
-                                            <a href="#" class="product__wishlish">
+                                            <div class="product__wishlist">
                                                 <i class="fas fa-heart"></i>
-                                            </a>
-                                            <a href="#"class="product__quickview">
+                                            </div>
+                                            <div class="product__quickview">
                                                 <i class="fas fa-eye"></i>
-                                            </a>
-                                            <a href="#"class="product__cart">
+                                            </div>
+                                            <div class="product__cart">
                                                 <i class="fas fa-shopping-cart"></i>
     
-                                            </a>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="product__desc">
@@ -649,16 +719,16 @@
                                             <img src="./assets/image/suunto-spartan-trainer-wrist-hr-black-techwear-2.png" alt="" class="img-secondary">
                                         </a>
                                         <div class="product__functions">
-                                            <a href="#" class="product__wishlish">
+                                            <div class="product__wishlist">
                                                 <i class="fas fa-heart"></i>
-                                            </a>
-                                            <a href="#"class="product__quickview">
+                                            </div>
+                                            <div class="product__quickview">
                                                 <i class="fas fa-eye"></i>
-                                            </a>
-                                            <a href="#"class="product__cart">
+                                            </div>
+                                            <div class="product__cart">
                                                 <i class="fas fa-shopping-cart"></i>
     
-                                            </a>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="product__desc">
@@ -687,16 +757,16 @@
                                             <img src="./assets/image/suunto-9-peak-granite-blue-titanium-2.png" alt="" class="img-secondary">
                                         </a>
                                         <div class="product__functions">
-                                            <a href="#" class="product__wishlish">
+                                            <div class="product__wishlist">
                                                 <i class="fas fa-heart"></i>
-                                            </a>
-                                            <a href="#"class="product__quickview">
+                                            </div>
+                                            <div class="product__quickview">
                                                 <i class="fas fa-eye"></i>
-                                            </a>
-                                            <a href="#"class="product__cart">
+                                            </div>
+                                            <div class="product__cart">
                                                 <i class="fas fa-shopping-cart"></i>
     
-                                            </a>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="product__desc">
@@ -725,16 +795,16 @@
                                             <img src="./assets/image/archetype-nemesis-automatic-2.jpg" alt="" class="img-secondary">
                                         </a>
                                         <div class="product__functions">
-                                            <a href="#" class="product__wishlish">
+                                            <div class="product__wishlist">
                                                 <i class="fas fa-heart"></i>
-                                            </a>
-                                            <a href="#"class="product__quickview">
+                                            </div>
+                                            <div class="product__quickview">
                                                 <i class="fas fa-eye"></i>
-                                            </a>
-                                            <a href="#"class="product__cart">
+                                            </div>
+                                            <div class="product__cart">
                                                 <i class="fas fa-shopping-cart"></i>
     
-                                            </a>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="product__desc">
@@ -763,16 +833,16 @@
                                             <img src="./assets/image/devon-tread-1E-2.jpg" alt="" class="img-secondary">
                                         </a>
                                         <div class="product__functions">
-                                            <a href="#" class="product__wishlish">
+                                            <div class="product__wishlist">
                                                 <i class="fas fa-heart"></i>
-                                            </a>
-                                            <a href="#"class="product__quickview">
+                                            </div>
+                                            <div class="product__quickview">
                                                 <i class="fas fa-eye"></i>
-                                            </a>
-                                            <a href="#"class="product__cart">
+                                            </div>
+                                            <div class="product__cart">
                                                 <i class="fas fa-shopping-cart"></i>
     
-                                            </a>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="product__desc">
@@ -1028,6 +1098,9 @@
             </div>
         </div>
     </footer>
+    <a href="#" id="scrollup" class="scrollup active">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="./assets/javascript/main.js"></script>

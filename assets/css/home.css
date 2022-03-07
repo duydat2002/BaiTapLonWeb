@@ -193,6 +193,34 @@ button {
     color: #fff;
 }
 
+/* ===== Scroll Up ===== */
+.scrollup {
+    position: fixed;
+    right: 3rem;
+    bottom: -30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid var(--green-color);
+    color: var(--green-color);
+    border-radius: 10px;
+    box-shadow: 3px 5px 10px hsl(0deg 0% 1% / 20%);
+    z-index: 100;
+    transition: 0.5s;
+}
+
+.scrollup.active {
+    bottom: 3rem;
+}
+
+.scrollup:hover {
+    background-color: var(--green-color);
+    color: #fff;
+}
+
 /* ===== Product ===== */
 .product__container {
     position: relative;
@@ -278,7 +306,7 @@ button {
     left: 0;
 }
 
-.product__functions > a {
+.product__functions > div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -289,9 +317,10 @@ button {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     margin: 8px;
     transition: 0.5s;
+    cursor: pointer;
 }
 
-.product__functions > a:hover {
+.product__functions > div:hover {
     background: var(--green-color);
     color: #fff;
     transform: rotateZ(360deg);
@@ -385,18 +414,61 @@ button {
 }
 
 .modal {
+    position: absolute;
+    left: 0;
+    right: 0;
     margin: 30px auto;
     padding: 15px;
     background: #fff;
+    border-radius: 10px;
     opacity: 0;
+    visibility: hidden;
     transform: translateY(-20%);
     transition: 0s;
 }
 
 .modal.active {
     opacity: 1;
+    visibility: visible;
     transform: translateY(0);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.modal__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 22px;
+    line-height: 0;
+    cursor: pointer;
     transition: 0.5s;
+}
+
+.modal__close:hover {
+    color: rgb(250, 48, 48);
+}
+
+/* ===== Wishlist Modal ===== */
+.wishlist-modal {
+    top: 40%;
+    width: 500px;
+    font-size: 15px;
+}
+
+.wishlist-modal-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    top: -10px;
+    right: -10px;
+    font-size: 15px;
+    background: #000;
+    color: #fff;
+    border: 3px solid #fff;
+    box-shadow: 0px 0px 6px rgb(0 0 0 / 50%);
+    border-radius: 50%;
 }
 
 /* ===== Quickview Modal ===== */
@@ -432,23 +504,6 @@ button {
 .quickview-item:hover,
 .quickview-item.active {
     border: 1px solid var(--green-color);
-}
-
-.quickview__detail {
-    position: relative;
-}
-
-.quickview__close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 22px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.quickview__close:hover {
-    color: rgb(250, 48, 48);
 }
 
 .quickview__name {
@@ -637,6 +692,92 @@ button {
     background: #e6683c;
 }
 
+/* ===== Blockcart Modal ===== */
+.blockcart-modal {
+    width: 1120px;
+}
+
+.blockcart__title {
+    font-size: 16px;
+    color: var(--green-light-color);
+    border-bottom: 1px solid #e5e5e5;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    padding: 0 15px 15px;
+}
+
+.blockcart__title i {
+    margin-right: 10px;
+}
+
+.blockcart__body {
+    padding: 30px 0;
+    letter-spacing: 0.2px;
+}
+
+.blockcart__body-left {
+    border-right: 1px solid #e5e5e5;
+}
+
+.blockcart__img {
+    background: #f5f5f5;
+}
+
+.blockcart__info,
+.blockcart__body-right {
+    font-size: 13px;
+    color: var(--black-light-color);
+    font-weight: 600;
+}
+
+.blockcart__info > * {
+    margin-bottom: 15px;
+}
+
+.blockcart__name {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.blockcart__price {
+    color: #999;
+    text-decoration: line-through;
+    letter-spacing: 0.2px;
+    margin-right: 5px;
+}
+
+.blockcart__price-sale {
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    margin-right: 5px;
+}
+
+.blockcart__body-right {
+    padding: 0 30px;
+}
+
+.blockcart__count {
+    font-size: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.blockcart__body-right > p {
+    margin-bottom: 15px;
+}
+
+.blockcart__subtotal span, 
+.blockcart__shipping span, 
+.blockcart__total span {
+    color: var(--text-dark-color);
+    font-weight: 400;
+}
+
+.blockcart__btns .button {
+    margin-right: 10px;
+}
+
 /*=============== HEADER & NAV ===============*/
 #header {
     position: relative;
@@ -745,6 +886,7 @@ button {
     color: #fff;
     background: var(--black-light-color);
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .header__cart:hover .cart__icon {
@@ -1556,9 +1698,9 @@ button {
 
 .footer__payment {
     margin-left: 10px;
-    transition: 0.5s;
+    transition: transform 0.5s;
 }
 
 .footer__payment:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 }

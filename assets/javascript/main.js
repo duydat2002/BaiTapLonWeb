@@ -29,6 +29,8 @@ function cartControl() {
             cartDropdown.classList.remove("active");
         }
     }
+
+    
 };
 cartControl();
 
@@ -141,6 +143,7 @@ function swiperSlider() {
 };
 swiperSlider();
 
+// Render Star
 function star() {
     const stars = document.querySelectorAll(".product__rating i");
     stars.forEach(star => {
@@ -154,71 +157,143 @@ function star() {
 };
 star();
 
-function quickview() {
-    const productQuickviews = document.querySelectorAll(".product__quickview");
-    const quickviewClose = document.querySelector(".quickview__close");
+// Modal Control
+function modal() {
     const modal = document.querySelector("#modal");
+    const wishlist = document.querySelector("#wishlist-modal");
     const quickview = document.querySelector("#quickview-modal");
-    
-    productQuickviews.forEach(item => {
-        item.onclick = () => {
-            modal.classList.add("active");
-            quickview.classList.add("active");
-            quickviewAction();
+    const blockcart = document.querySelector("#blockcart-modal");
+
+    modal.onclick = (e) => {
+        if (!wishlist.contains(e.target) && wishlist.className.includes("active")) {
+            modal.classList.remove("active");
+            wishlist.classList.remove("active");
         }
-    })
-    
-    quickviewClose.onclick = () =>  {
-        modal.classList.remove("active");
-        quickview.classList.remove("active");
+
+        if (!quickview.contains(e.target) && quickview.className.includes("active")) {
+            modal.classList.remove("active");
+            quickview.classList.remove("active");
+        }
+
+        if (!blockcart.contains(e.target) && blockcart.className.includes("active")) {
+            modal.classList.remove("active");
+            blockcart.classList.remove("active");
+        }
     }
 
-    function quickviewAction() {
-        const sizes = document.querySelectorAll(".quickview__action .size-item");
-        sizes.forEach(item => {
+    function wishlistControl() {
+        const productWishlist = document.querySelectorAll(".product__wishlist");
+        const wishlistClose = document.querySelector(".wishlist-modal .modal__close");
+        
+        productWishlist.forEach(item => {
             item.onclick = () => {
-                const sizeActive = document.querySelector(".quickview__action .size-item.active");
-    
-                sizeActive.classList.remove("active");
-                item.classList.add("active");
+                modal.classList.add("active");
+                wishlist.classList.add("active");
             }
         })
-
-        const colors = document.querySelectorAll(".quickview__action .color-item");
-        colors.forEach(item => {
-            item.onclick = () => {
-                const colorActive = document.querySelector(".quickview__action .color-item.active");
-    
-                colorActive.classList.remove("active");
-                item.classList.add("active");
-            }
-        })
-
-        const quantityInput = document.querySelector(".quickview__quantity .quantity__input");
-        const quantityUp = document.querySelector(".quickview__quantity .quantity-up");
-        const quantityDown = document.querySelector(".quickview__quantity .quantity-down");
-        quantityUp.onclick = () => {
-            const quantityNumber = parseInt(quantityInput.value);
-            quantityInput.value = quantityNumber + 1;
+        
+        wishlistClose.onclick = () =>  {
+            modal.classList.remove("active");
+            wishlist.classList.remove("active");
         }
-        quantityDown.onclick = () => {
-            const quantityNumber = parseInt(quantityInput.value);
-            quantityInput.value = quantityNumber == 1 ? 1 : quantityNumber - 1;
-        }
+    };
+    wishlistControl();
 
-        const quickviewImg = document.querySelector(".quickview__mainimg > img");
-        const quickviewItems = document.querySelectorAll(".quickview-item");
-        quickviewItems.forEach(item => {
+    function quickviewControl() {
+        const productQuickviews = document.querySelectorAll(".product__quickview");
+        const quickviewClose = document.querySelector(".quickview-modal .modal__close");
+        
+        productQuickviews.forEach(item => {
             item.onclick = () => {
-                const quickviewActive = document.querySelector(".quickview-item.active");
-                const srcImg = item.querySelector("img").src;
-                
-                quickviewActive?.classList.remove("active");
-                item.classList.add("active");
-                quickviewImg.src = `${srcImg}`;
+                modal.classList.add("active");
+                quickview.classList.add("active");
+                quickviewAction();
             }
         })
-    }
+        
+        quickviewClose.onclick = () =>  {
+            modal.classList.remove("active");
+            quickview.classList.remove("active");
+        }
+        modal.onclick
+    
+        function quickviewAction() {
+            const sizes = document.querySelectorAll(".quickview__action .size-item");
+            sizes.forEach(item => {
+                item.onclick = () => {
+                    const sizeActive = document.querySelector(".quickview__action .size-item.active");
+        
+                    sizeActive.classList.remove("active");
+                    item.classList.add("active");
+                }
+            })
+    
+            const colors = document.querySelectorAll(".quickview__action .color-item");
+            colors.forEach(item => {
+                item.onclick = () => {
+                    const colorActive = document.querySelector(".quickview__action .color-item.active");
+        
+                    colorActive.classList.remove("active");
+                    item.classList.add("active");
+                }
+            })
+    
+            const quantityInput = document.querySelector(".quickview__quantity .quantity__input");
+            quantityInput.value = 1;
+            const quantityUp = document.querySelector(".quickview__quantity .quantity-up");
+            const quantityDown = document.querySelector(".quickview__quantity .quantity-down");
+            quantityUp.onclick = () => {
+                const quantityNumber = parseInt(quantityInput.value);
+                quantityInput.value = quantityNumber + 1;
+            }
+            quantityDown.onclick = () => {
+                const quantityNumber = parseInt(quantityInput.value);
+                quantityInput.value = quantityNumber == 1 ? 1 : quantityNumber - 1;
+            }
+    
+            const quickviewImg = document.querySelector(".quickview__mainimg > img");
+            const quickviewItems = document.querySelectorAll(".quickview-item");
+            quickviewItems.forEach(item => {
+                item.onclick = () => {
+                    const quickviewActive = document.querySelector(".quickview-item.active");
+                    const srcImg = item.querySelector("img").src;
+                    
+                    quickviewActive?.classList.remove("active");
+                    item.classList.add("active");
+                    quickviewImg.src = `${srcImg}`;
+                }
+            })
+        }
+    };
+    quickviewControl();
+
+    function blockcartControl() {
+        const productBlockcart = document.querySelectorAll(".product__cart");
+        const blockcartClose = document.querySelector(".blockcart-modal .modal__close");
+        
+        productBlockcart.forEach(item => {
+            item.onclick = () => {
+                modal.classList.add("active");
+                blockcart.classList.add("active");
+            }
+        })
+        
+        blockcartClose.onclick = () =>  {
+            modal.classList.remove("active");
+            blockcart.classList.remove("active");
+        }
+    };
+    blockcartControl();
 };
-quickview();
+modal();
 
+
+// scrollUp
+function scrollUp(){
+    const scrollUp = document.querySelector("#scrollup");
+    if(this.scrollY >= 350) 
+        scrollUp.classList.add("active"); 
+    else 
+        scrollUp.classList.remove("active")
+}
+window.addEventListener('scroll', scrollUp);

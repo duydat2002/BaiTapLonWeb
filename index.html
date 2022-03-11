@@ -199,9 +199,28 @@
             </div>
         </div>
     </div>
+    <div id="navbar" class="navbar">
+        <div class="navbar__title">
+            <i class="fas fa-times navbar__close"></i>
+            <span>Menu</span>
+        </div>
+        <div class="navbar__menu">
+            <a href="#" class="navber__menu-item">Home</a>
+            <a href="#" class="navber__menu-item">Men Watches</a>
+            <a href="#" class="navber__menu-item">Womem Watches</a>
+            <a href="#" class="navber__menu-item">Luxury Watches</a>
+            <a href="#" class="navber__menu-item">About Us</a>
+            <a href="#" class="navber__menu-item">Manager</a>
+            <a href="#" class="navber__menu-item">Sign In</a>
+        </div>
+    </div>
+    <div id="overlay"></div>
     <header id="header">
         <div class="header-top">
             <div class="container header-top-container flex">
+                <div class="navbar__open">
+                    <i class="fas fa-bars"></i>
+                </div>
                 <a href="#" class="header__logo-box">
                     <img src="./assets/image/Logo.jpg" alt="Logo" class="header__logo">
                 </a>
@@ -216,7 +235,7 @@
                     </div>
                 </div>
                 <div class="header__widget flex">
-                    <div class="header__contact flex">
+                    <div class="header__contact flex hide-md">
                         <div class="contact__icon">
                             <i class="fas fa-phone-alt"></i>
                         </div>
@@ -238,7 +257,7 @@
                                     </a>
                                     <div class="cart-info">
                                         <a href="#"class="cart-name">Suunto Spartan Trainer Wrist HR Black</a>
-                                        <p class="cart-price">7.900.000₫</p>
+                                        <p class="cart-price">€171.55</p>
                                         <p class="cart-qty">
                                             Quantity: 
                                             <span class="cart-qty-number">1</span>
@@ -250,11 +269,11 @@
                                 </div>
                                 <div class="cart__item flex">
                                     <a href="#" class="cart-img">
-                                        <img src="./assets/image/suunto-spartan-trainer-wrist-hr-black-techwear-1.png" alt="">
+                                        <img src="./assets/image/suunto-9-peak-granite-blue-titanium-1.png" alt="">
                                     </a>
                                     <div class="cart-info">
                                         <a href="#"class="cart-name">Suunto Spartan Trainer Wrist HR Black</a>
-                                        <p class="cart-price">7.900.000₫</p>
+                                        <p class="cart-price">€477.30</p>
                                         <p class="cart-qty">
                                             Quantity: 
                                             <span class="cart-qty-number">1</span>
@@ -266,11 +285,11 @@
                                 </div>
                                 <div class="cart__item flex">
                                     <a href="#" class="cart-img">
-                                        <img src="./assets/image/suunto-spartan-trainer-wrist-hr-black-techwear-1.png" alt="">
+                                        <img src="./assets/image/archetype-nemesis-automatic-1.png" alt="">
                                     </a>
                                     <div class="cart-info">
                                         <a href="#"class="cart-name">Suunto Spartan Trainer Wrist HR Black</a>
-                                        <p class="cart-price">7.900.000₫</p>
+                                        <p class="cart-price">€245.80</p>
                                         <p class="cart-qty">
                                             Quantity: 
                                             <span class="cart-qty-number">1</span>
@@ -284,16 +303,16 @@
                             <div class="cart__sumary">
                                 <div class="cart__sumary-items">
                                     <span>3 items</span>
-                                    <span class="cart__items-price">7.900.000₫</span>
+                                    <span class="cart__items-price">€894.65</span>
                                 </div>
                                 <div class="cart__sumary-ship">
                                     <span>Shipping</span>
-                                    <span class="cart__ship-price">80.000₫</span>
+                                    <span class="cart__ship-price">€15.00</span>
                                 </div>
                             </div>
                             <div class="cart__total">
                                 <span>Total</span>
-                                <span class="cart__ship-price">7.980.000₫</span>
+                                <span class="cart__ship-price">€879.65</span>
                             </div>
                             <div class="cart__view">
                                 <button class="button button-gb">View Cart</button>
@@ -303,7 +322,7 @@
                 </div>
             </div>
         </div>
-        <div class="header-bottom">
+        <div class="header-bottom hide-md">
             <div class="container header-bottom-container">
                 <ul class="header__menu">
                     <li class="menu__item">
@@ -376,8 +395,8 @@
                         </div>
                     </div>
                     <div class="swiper-navigation">
-                        <i class="fas fa-angle-left swiper-prev"></i>
-                        <i class="fas fa-angle-right swiper-next"></i>
+                        <i class="fas fa-angle-left swiper-prev hide-md"></i>
+                        <i class="fas fa-angle-right swiper-next hide-md"></i>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -386,18 +405,19 @@
         <section class="section categories">
             <div class="container">
                 <div class="categories__container flex cl-gap">
-                    <div class="col-3 pd-gap">
-                        <div class="categories__desc">
-                            <h2 class="categories__title section-title">Categories</h2>
-                            <p class="categories__text">Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting The Industry's Standard.</p>
+                    <div class="col-3 col-md-12 pd-gap">
+                        <div class="categories__box">
+                            <div class="categories__desc">
+                                <h2 class="categories__title section-title">Categories</h2>
+                                <p class="categories__text">Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting The Industry's Standard.</p>
+                            </div>
+                            <div class="categories__navigation">
+                                <i class="fas fa-long-arrow-alt-left swiper-prev"></i>
+                                <i class="fas fa-long-arrow-alt-right swiper-next"></i>
+                            </div>
                         </div>
-                        <div class="categories__navigation">
-                            <i class="fas fa-long-arrow-alt-left swiper-prev"></i>
-                            <i class="fas fa-long-arrow-alt-right swiper-next"></i>
-                        </div>
-                        <div class="categories__pagination"></div>
                     </div>
-                    <div class="col-9 pd-gap">
+                    <div class="col-9 col-md-12 pd-gap">
                         <div class="categories__slider">
                             <div class="swiper">
                                 <div class="swiper-wrapper">
@@ -445,31 +465,33 @@
             </div>
         </section>
         <section class="service">
-            <div class="service__container container flex">
-                <div class="col-4">
-                    <div class="service-item item-1 has-separate flex">
-                        <div class="service__icon"></div>
-                        <div class="service__content">
-                            <p class="service__name">Free delivery</p>
-                            <p class="service__desc">Free shipping on all order</p>
+            <div class="container">
+                <div class="service__container flex">
+                    <div class="col-4 col-sm-12">
+                        <div class="service-item item-1 has-separate flex">
+                            <div class="service__icon"></div>
+                            <div class="service__content">
+                                <p class="service__name">Free delivery</p>
+                                <p class="service__desc">Free shipping on all order</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-4">
-                    <div class="service-item item-2 has-separate flex">
-                        <div class="service__icon"></div>
-                        <div class="service__content">
-                            <p class="service__name">Money return</p>
-                            <p class="service__desc">Back guarantee in 7 days</p>
+                    <div class="col-4 col-sm-12">
+                        <div class="service-item item-2 has-separate flex">
+                            <div class="service__icon"></div>
+                            <div class="service__content">
+                                <p class="service__name">Money return</p>
+                                <p class="service__desc">Back guarantee in 7 days</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-4">
-                    <div class="service-item item-3 flex">
-                        <div class="service__icon"></div>
-                        <div class="service__content">
-                            <p class="service__name">Member Discount</p>
-                            <p class="service__desc">Onevery order over $130.00</p>
+                    <div class="col-4 col-sm-12">
+                        <div class="service-item item-3 flex">
+                            <div class="service__icon"></div>
+                            <div class="service__content">
+                                <p class="service__name">Member Discount</p>
+                                <p class="service__desc">Onevery order over $130.00</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -561,7 +583,7 @@
                                 <div class="product-item swiper-slide">
                                     <div class="product__thumb-container">
                                         <a href="#" class="product__img">
-                                            <img src="./assets/image/archetype-nemesis-automatic-1.jpg" alt="" class="img-main">
+                                            <img src="./assets/image/archetype-nemesis-automatic-1.png" alt="" class="img-main">
                                             <img src="./assets/image/archetype-nemesis-automatic-2.jpg" alt="" class="img-secondary">
                                         </a>
                                         <div class="product__functions">
@@ -599,8 +621,8 @@
                                 <div class="product-item swiper-slide">
                                     <div class="product__thumb-container">
                                         <a href="#" class="product__img">
-                                            <img src="./assets/image/devon-tread-1E-1.jpg" alt="" class="img-main">
-                                            <img src="./assets/image/devon-tread-1E-2.jpg" alt="" class="img-secondary">
+                                            <img src="./assets/image/devon-tread-1E-1.png" alt="" class="img-main">
+                                            <img src="./assets/image/devon-tread-1E-2.png" alt="" class="img-secondary">
                                         </a>
                                         <div class="product__functions">
                                             <div class="product__wishlist">
@@ -650,7 +672,7 @@
         <section class="banner">
             <div class="container">
                 <div class="banner__row row-1 flex cl-gap">
-                    <div class="col-8 pd-gap">
+                    <div class="col-8 col-sm-12 pd-gap">
                         <div class="banner-item">
                             <a href="#" class="banner__img">
                                 <img src="./assets/image/Banner-1.jpg" alt="">
@@ -665,7 +687,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4 pd-gap">
+                    <div class="col-4 hide-sm pd-gap">
                         <div class="banner-item">
                             <a href="#" class="banner__img">
                                 <img src="./assets/image/Banner-2.jpg" alt="">
@@ -679,14 +701,14 @@
                     </div>
                 </div>
                 <div class="banner__row row-2 flex cl-gap">
-                    <div class="col-4 pd-gap">
+                    <div class="col-4 hide-sm pd-gap">
                         <div class="banner-item">
                             <a href="#" class="banner__img">
                                 <img src="./assets/image/Banner-3.jpg" alt="">
                             </a>
                         </div>
                     </div>
-                    <div class="col-8 pd-gap">
+                    <div class="col-8 col-sm-12 pd-gap">
                         <div class="banner-item">
                             <a href="#" class="banner__img">
                                 <img src="./assets/image/Banner-4.jpg" alt="">
@@ -791,7 +813,7 @@
                                 <div class="product-item swiper-slide">
                                     <div class="product__thumb-container">
                                         <a href="#" class="product__img">
-                                            <img src="./assets/image/archetype-nemesis-automatic-1.jpg" alt="" class="img-main">
+                                            <img src="./assets/image/archetype-nemesis-automatic-1.png" alt="" class="img-main">
                                             <img src="./assets/image/archetype-nemesis-automatic-2.jpg" alt="" class="img-secondary">
                                         </a>
                                         <div class="product__functions">
@@ -829,8 +851,8 @@
                                 <div class="product-item swiper-slide">
                                     <div class="product__thumb-container">
                                         <a href="#" class="product__img">
-                                            <img src="./assets/image/devon-tread-1E-1.jpg" alt="" class="img-main">
-                                            <img src="./assets/image/devon-tread-1E-2.jpg" alt="" class="img-secondary">
+                                            <img src="./assets/image/devon-tread-1E-1.png" alt="" class="img-main">
+                                            <img src="./assets/image/devon-tread-1E-2.png" alt="" class="img-secondary">
                                         </a>
                                         <div class="product__functions">
                                             <div class="product__wishlist">
@@ -944,9 +966,12 @@
         <div class="container">
             <div class="footer__container">
                 <div class="flex cl-gap">
-                    <div class="col-3 pd-gap">
-                        <div class="footer__content footer__contact">
-                            <h3 class="footer__title">Contact Us</h3>
+                    <div class="col-3 col-md-12 pd-gap">
+                        <div class="footer__content footer__contact has-drop">
+                            <h3 class="footer__title">
+                                Contact Us
+                                <i class="fas fa-angle-right footer__title-icon"></i>
+                            </h3>
                             <ul class="footer__list">
                                 <li>
                                     <i class="fas fa-map-marker-alt location-icon"></i>
@@ -971,9 +996,12 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-3 pd-gap">
-                        <div class="footer__content footer__links">
-                            <h3 class="footer__title">Products</h3>
+                    <div class="col-3 col-md-12 pd-gap">
+                        <div class="footer__content footer__links has-drop">
+                            <h3 class="footer__title">
+                                Products
+                                <i class="fas fa-angle-right footer__title-icon"></i>
+                            </h3>
                             <ul class="footer__list">
                                 <li>
                                     <a href="#" class="footer__link">
@@ -1008,9 +1036,12 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-3 pd-gap">
-                        <div class="footer__content footer__links">
-                            <h3 class="footer__title">Our Company</h3>
+                    <div class="col-3 col-md-12 pd-gap">
+                        <div class="footer__content footer__links has-drop">
+                            <h3 class="footer__title">
+                                Our Company
+                                <i class="fas fa-angle-right footer__title-icon"></i>
+                            </h3>
                             <ul class="footer__list">
                                 <li>
                                     <a href="#" class="footer__link">
@@ -1045,7 +1076,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-3 pd-gap">
+                    <div class="col-3 col-md-12 pd-gap">
                         <div class="footer__content footer__newsletter">
                             <h3 class="footer__title">Join Our Newsletter</h3>
                             <span class="footer__subtitle">There are many variations of passages Lorem Ipsum available</span>
@@ -1098,7 +1129,7 @@
             </div>
         </div>
     </footer>
-    <a href="#" id="scrollup" class="scrollup active">
+    <a href="#" id="scrollup" class="scrollup">
         <i class="fas fa-arrow-up"></i>
     </a>
 

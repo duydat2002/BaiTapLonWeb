@@ -93,6 +93,7 @@ button {
 
 .flex {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .cl-gap {
@@ -414,24 +415,28 @@ button {
 }
 
 .modal {
-    position: absolute;
-    left: 0;
-    right: 0;
+    position: relative;
     margin: 30px auto;
     padding: 15px;
     background: #fff;
     border-radius: 10px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-20%);
-    transition: 0s;
+    display: none;
 }
 
 .modal.active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-    transition: transform 0.5s, opacity 0.5s;
+    display: block;
+    animation: fadeDown 0.5s;
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .modal__close {
@@ -778,6 +783,78 @@ button {
     margin-right: 10px;
 }
 
+/* Overlay */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 101;
+    display: none;
+}
+
+#overlay.active {
+    display: block;
+}
+
+/*=============== NAVBAR ===============*/
+.navbar__open {
+    font-size: 20px;
+    color: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    bottom: 0;
+    width: 300px;
+    background: #fff;
+    box-shadow: 10px 0px 15px hsl(0deg 0% 1% / 30%);
+    z-index: 102;
+    padding: 10px 20px;
+    transition: 0.5s;
+}
+
+.navbar.active {
+    left: 0;
+}
+
+.navbar__title {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 1px solid #dfdfdf;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.navber__menu-item {
+    display: block;
+    font-size: 14px;
+    padding: 10px 0;
+    transition: 0.3s;
+}
+
+.navber__menu-item:hover {
+    color: var(--green-color);
+}
+
+.navbar__close {
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.navbar__close:hover {
+    color: rgb(250, 48, 48);
+}
+
 /*=============== HEADER & NAV ===============*/
 #header {
     position: relative;
@@ -795,23 +872,32 @@ button {
     align-items: center;
 }
 
+.navbar__open {
+    display: none;
+}
+
 .header__search {
-    left: 50%;
     width: 500px;
     height: 50px;
-    background: #fff;
-    border-radius: 30px;
+    transition: 0.3s;
     margin-left: auto;
 }
 
 .header__search__container {
     position: relative;
+    height: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.header__search__container form {
+    height: 100%;
 }
 
 .search__input {
     padding: 10px 50px 10px 25px;
     width: 100%;
-    height: 50px;
+    height: 100%;
     border-radius: 30px;
 }
 
@@ -828,6 +914,10 @@ button {
 
 .search__btn:hover {
     color: var(--green-color);
+}
+
+.search__btn-clone {
+    display: none;
 }
 
 .header__widget {
@@ -936,8 +1026,9 @@ button {
 
 .cart__item {
     position: relative;
-    padding: 10px 0;
+    flex-wrap: nowrap;
     border-bottom: 1px solid var(--border-color);
+    padding: 10px 0;
 }
 
 .cart-img {
@@ -1184,6 +1275,10 @@ button {
     height: 2px;
     background: var(--green-color);
     margin-top: 10px;
+}
+
+.categories__box {
+    position: relative;
 }
 
 .categories__text {
@@ -1513,6 +1608,11 @@ button {
     overflow: visible;
 }
 
+.brand-item {
+    display: flex;
+    justify-content: center;
+}
+
 .brand__img {
     position: relative;
     top: 0;
@@ -1583,7 +1683,7 @@ button {
     margin: 7px 0;
 }
 
-.footer__contact i {
+.footer__contact .footer__list i {
     color: var(--green-color);
     margin-right: 10px;
 }
@@ -1606,7 +1706,7 @@ button {
     margin: 10px 0;
 }
 
-.footer__links i {
+.footer__links .footer__list i {
     color: var(--text-light-color);
     margin-right: 10px;
 }
@@ -1704,3 +1804,411 @@ button {
 .footer__payment:hover {
     transform: translateY(-3px);
 }
+
+/*=============== Breakpoint ===============*/
+@media screen and (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .product__title {
+        margin-bottom: 30px;
+    }
+
+    .header__search {
+        width: 400px;
+    }
+
+    .menu__link {
+        padding: 20px 15px;
+    }
+
+    .home-banner__text {
+        left: 5%;
+    }
+
+    .home-banner__sale {
+        font-size: 23px;
+    }
+
+    .home-banner__title {
+        font-size: 25px;
+    }
+
+    .banner__text-title {
+        font-size: 25px;
+    }
+
+    .banner__button {
+        margin-top: 30px;
+    }
+
+    .banner__text.text-2 .banner__text-title {
+        font-size: 22px;
+    }
+
+    .banner__img {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .button {
+        font-size: 12px;
+        padding: 5px 15px;
+    }
+
+    .hide-md {
+        display: none !important;
+    }
+
+    .col-md-12 { width: 100%; }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .container {
+        max-width: 720px;
+    }
+
+    .header-top.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        animation: slide-down 0.6s;
+        z-index: var(--z-fixed);
+    }
+
+    .header-top-container {
+        height: 85px;
+    }
+    
+    .cart__dropdown {
+        top: 65px;
+    }
+
+    .navbar__open {
+        display: block;
+    }
+
+    .header__logo-box {
+        width: 120px;
+    }
+    
+    .header__widget {
+        margin: 0;
+    }
+
+    .header__search {
+        height: 45px;
+        width: 45px;
+        margin-right: 20px;
+    }
+
+    .header__search.active {
+        width: 350px;
+    }
+
+    .search__input {
+        background: var(--black-light-color);
+        color: #fff;
+    }
+
+    .search__btn {
+        right: 7px;
+        color: #fff;
+    }
+
+    .cart__link {
+        width: 45px;
+        height: 45px;
+    }
+
+    .home-banner__slider:hover .swiper-pagination {
+        bottom: 15px;
+    }
+
+    .home-banner__text {
+        width: 250px;
+    }
+
+    .home-banner__sale {
+        font-size: 20px;
+    }
+
+    .home-banner__desc {
+        font-size: 10px;
+        margin-bottom: 15px;
+    }
+
+    .categories__box {
+        margin-bottom: 15px;
+    }
+
+    .categories__navigation {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 15px;
+    }
+
+    .service__container  {
+        padding: 20px 0;
+    }
+
+    .service__content {
+        text-align: center;
+    }
+
+    .service__desc {
+        margin-top: 0;
+    }
+
+    .banner__text.text-1 {
+        right: 30px;
+    }
+
+    .banner__text-title {
+        font-size: 18px;
+    }
+
+    .banner__button {
+        margin-top: 20px;
+    }
+
+    .banner__text.text-2 { 
+        top: 20px;
+    }
+
+    .banner__text-discount {
+        font-size: 18px;
+    }
+
+    .banner__text.text-2 .banner__text-title {
+        font-size: 16px;
+    }
+
+    .banner__img {
+        height: 190px;
+    }
+
+    .footer__title {
+        position: relative;
+        padding: 10px 0;
+        margin-bottom: 0;
+    }
+
+    .footer__title-icon {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transition: 0.3s;
+        transform: translateY(-50%);
+    }
+
+    .footer__content.active .footer__title-icon {
+        transform: translateY(-50%) rotateZ(90deg);
+    }
+
+    .footer__list {
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    .footer__content.active .footer__list {
+        max-height: 20em;
+    }
+
+    .footer__social {
+        justify-content: center;
+    }
+
+    .footer__bottom {  
+        flex-direction: column-reverse;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .footer__payments {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .hide-sm {
+        display: none;
+    }
+
+    .col-sm-12 { width: 100%; }
+
+    .container {
+        max-width: 540px;
+    }
+
+    .header__search.active {
+        width: 200px;
+    }
+
+    .search__input {
+        font-size: 13px;
+    }
+
+    .home-banner__slider:hover .swiper-pagination {
+        bottom: 10px;
+    }
+
+    .swiper-pagination-bullet {
+        width: 10px !important;
+        height: 10px !important;
+    }
+
+    .home-banner__text {
+        width: 180px;
+    }
+
+    .home-banner__sale {
+        font-size: 12px;
+    }
+
+    .home-banner__title {
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+
+    .home-banner__desc {
+        font-size: 8px;
+        margin-bottom: 5px;
+    }
+
+    .categories__name {
+        font-size: 13px;
+    }
+
+    .service__container {
+        padding: 10px 0;
+    }
+
+    .service-item {
+        padding: 5px 0;
+    }
+
+    .service-item.has-separate {
+        border: none;
+    }
+
+    .banner__img {
+        height: auto;
+    }
+
+    .banner__row.row-2 {
+        margin-top: 20px;
+    }
+
+    #footer {
+        padding-top: 35px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .product__title {
+        font-size: 22px;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    .header-top-container {
+        height: 75px;
+    }
+
+    .header__logo-box {
+        width: 100px;
+    }
+
+    .cart__dropdown {
+        top: 60px;
+        width: calc(100vw - 15px);
+    }
+
+    .cart__dropdown.active {
+        right: -15px;
+    }
+
+    .cart__scroll {
+        max-height: 110px;
+    }
+
+    .cart__sumary-items, 
+    .cart__sumary-ship, 
+    .cart__total {
+        font-size: 13px;
+    }
+
+    .cart-img {
+        width: 90px;
+    }
+
+    .cart-name {
+        font-size: 13px;
+    }
+
+    .cart-price {
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+
+    .cart-qty {
+        font-size: 12px;
+    }
+
+    .home-banner__text {
+        width: 100px;
+    }
+
+    .home-banner__desc {
+        display: none;
+    }
+
+    .categories__slider {
+        margin: 0 30px;
+    }
+
+    .categories__text {
+        line-height: 25px;
+    }
+
+    .categories__name {
+        font-size: 15px;
+    }
+
+    .banner__text.text-1 {
+        right: 15px;
+    }
+
+    .banner__text-discount,
+    .banner__text-title {
+        font-size: 15px;
+    }
+
+    .banner__button {
+        margin-top: 10px;
+    }
+}
+
+
+
+
+
+

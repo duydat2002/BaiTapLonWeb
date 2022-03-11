@@ -1672,6 +1672,10 @@ button {
     margin-bottom: 25px;
 }
 
+.footer__title-icon {
+    display: none !important;
+}
+
 .footer__container {
     padding-bottom: 40px;
     border-bottom: 1px solid #262626;
@@ -2005,6 +2009,7 @@ button {
     }
 
     .footer__title-icon {
+        display: block !important;
         position: absolute;
         top: 50%;
         right: 0;

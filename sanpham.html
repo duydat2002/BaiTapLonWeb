@@ -224,7 +224,7 @@
                     <i class="fas fa-bars"></i>
                 </div>
                 <a href="#" class="header__logo-box">
-                    <img src="./assets/image/Logo.jpg" alt="Logo" class="header__logo">
+                    <img src="./assets/image/Logo.png" alt="Logo" class="header__logo">
                 </a>
                 <div class="header__search">
                     <div class="header__search__container">
@@ -385,32 +385,60 @@
                                     <div class="filter__color">
                                         <h4 class="filter__title">Color</h4>
                                         <div class="filter__desc">
-                                            <div class="filter__item">
-                                                <span class="color__box">
+                                            <div class="filter__item" data-value="Color: Grey">
+                                                <span class="color__box" style="background: #aab2bd">
                                                     <i class="fas fa-check filter-check-icon"></i>
                                                 </span>
                                                 <span class="color__name">Grey</span>
                                                 <span class="color__qty">(7)</span>
                                             </div>
-                                            <div class="filter__item">
-                                                <span class="color__box">
+                                            <div class="filter__item" data-value="Color: White">
+                                                <span class="color__box" style="background: #fff">
                                                     <i class="fas fa-check filter-check-icon"></i>
                                                 </span>
                                                 <span class="color__name">White</span>
                                                 <span class="color__qty">(6)</span>
                                             </div>
-                                            <div class="filter__item">
-                                                <span class="color__box">
+                                            <div class="filter__item" data-value="Color: Red">
+                                                <span class="color__box" style="background: #e84c3d">
                                                     <i class="fas fa-check filter-check-icon"></i>
                                                 </span>
                                                 <span class="color__name">Red</span>
                                                 <span class="color__qty">(5)</span>
                                             </div>
-                                            <div class="filter__item">
-                                                <span class="color__box">
+                                            <div class="filter__item" data-value="Color: Black">
+                                                <span class="color__box" style="background: #434a54">
                                                     <i class="fas fa-check filter-check-icon"></i>
                                                 </span>
                                                 <span class="color__name">Black</span>
+                                                <span class="color__qty">(4)</span>
+                                            </div>
+                                            <div class="filter__item" data-value="Color: Orange">
+                                                <span class="color__box" style="background: #f39c11">
+                                                    <i class="fas fa-check filter-check-icon"></i>
+                                                </span>
+                                                <span class="color__name">Orange</span>
+                                                <span class="color__qty">(3)</span>
+                                            </div>
+                                            <div class="filter__item" data-value="Color: Blue">
+                                                <span class="color__box" style="background: #5d9cec">
+                                                    <i class="fas fa-check filter-check-icon"></i>
+                                                </span>
+                                                <span class="color__name">Blue</span>
+                                                <span class="color__qty">(7)</span>
+                                            </div>
+                                            <div class="filter__item" data-value="Color: Green">
+                                                <span class="color__box" style="background: #a0d468">
+                                                    <i class="fas fa-check filter-check-icon"></i>
+                                                </span>
+                                                <span class="color__name">Green</span>
+                                                <span class="color__qty">(4)</span>
+                                            </div>
+                                            <div class="filter__item" data-value="Color: Yellow">
+                                                <span class="color__box" style="background: #f1c40f">
+                                                    <i class="fas fa-check filter-check-icon"></i>
+                                                </span>
+                                                <span class="color__name">Yellow</span>
                                                 <span class="color__qty">(3)</span>
                                             </div>
                                         </div>
@@ -419,38 +447,37 @@
                                         <h4 class="filter__title">Price</h4>
                                         <div class="filter__desc">
                                             <div class="filter__price-input flex">
-                                                <input type="text" name="priceFrom" maxlength="13" placeholder="€ From">
+                                                <input type="number" name="priceFrom" min="0"  placeholder="€ From">
                                                 <div class="seperate">-</div>
-                                                <input type="text" name="priceTo" maxlength="13" placeholder="€ To">
+                                                <input type="number" name="priceTo" min="0"  placeholder="€ To">
                                             </div>
-                                            <div class="button button-gb filter__price-btn">Apply</div>
                                         </div>
                                     </div>
                                     <div class="filter__size">
                                         <h4 class="filter__title">Size</h4>
                                         <div class="filter__desc">
-                                            <div class="filter__item">
+                                            <div class="filter__item" data-value="Size: S">
                                                 <span class="size__box">
                                                     <i class="fas fa-check filter-check-icon"></i>
                                                 </span>
                                                 <span class="size__name">S</span>
                                                 <span class="size__qty">(3)</span>
                                             </div>
-                                            <div class="filter__item">
+                                            <div class="filter__item" data-value="Size: M">
                                                 <span class="size__box">
                                                     <i class="fas fa-check filter-check-icon"></i>
                                                 </span>
                                                 <span class="size__name">M</span>
                                                 <span class="size__qty">(3)</span>
                                             </div>
-                                            <div class="filter__item">
+                                            <div class="filter__item" data-value="Size: L">
                                                 <span class="size__box">
                                                     <i class="fas fa-check filter-check-icon"></i>
                                                 </span>
                                                 <span class="size__name">L</span>
                                                 <span class="size__qty">(4)</span>
                                             </div>
-                                            <div class="filter__item">
+                                            <div class="filter__item" data-value="Size: XL">
                                                 <span class="size__box">
                                                     <i class="fas fa-check filter-check-icon"></i>
                                                 </span>
@@ -459,24 +486,25 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="button button-gb filter__price-btn">Apply</div>
                                 </div>
                             </div>
                             <a href="#" class="left-banner hide-md">
-                                <img src="./assets/image/left-banner-1.jpg" alt="">
+                                <img src="./assets/image/left-banner-1.png" alt="">
                             </a>
                         </div>
                     </div>
                     <div class="col-9 col-md-12 pd-gap">
                         <div class="column-right">
                             <div class="categories__banner">
-                                <img src="./assets/image/banner-products.jpg" alt="">
+                                <img src="./assets/image/banner-products.png" alt="">
                             </div>
                             <h3 class="categories__title">Men Watches</h3>
                             <p class="categories__desc">The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable that it has a more-or-less normal distribution of letters.</p>
                             <div class="products">
                                 <div class="products__list-sort flex">
                                     <div class="col-6 col-md-12">
-                                        <div class="products__list flex">
+                                        <div class="products__list-type flex">
                                             <i class="fas fa-th-large list-icon list-icon-grid active"></i>
                                             <i class="fas fa-th-list list-icon list-icon-list"></i>
                                             <span class="products__list-qty">
@@ -509,177 +537,17 @@
                                 <div class="products__active-filter flex">
                                     <span class="active-filter__title">Active filtes</span>
                                     <div class="active-filter__list flex">
-                                        <div class="filter-item">
+                                        <!-- <div class="filter-item">
                                             <span class="filter-item__name">Color: Grey</span>
                                             <i class="fas fa-times filter-item__close"></i>
                                         </div>
                                         <div class="filter-item">
                                             <span class="filter-item__name">Color: Black</span>
                                             <i class="fas fa-times filter-item__close"></i>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                                 <div class="products__list flex cl-gap">
-                                    <div class="col-4 col-sm-6 col-xsm-12 pd-gap">
-                                        <div class="product-item">
-                                            <div class="product__thumb-container">
-                                                <a href="#" class="product__img">
-                                                    <img src="./assets/image/suunto-spartan-trainer-wrist-hr-black-techwear-1.png" alt="" class="img-main">
-                                                    <img src="./assets/image/suunto-spartan-trainer-wrist-hr-black-techwear-2.png" alt="" class="img-secondary">
-                                                </a>
-                                                <div class="product__functions">
-                                                    <div class="product__wishlist">
-                                                        <i class="fas fa-heart"></i>
-                                                    </div>
-                                                    <div class="product__quickview">
-                                                        <i class="fas fa-eye"></i>
-                                                    </div>
-                                                    <div class="product__cart">
-                                                        <i class="fas fa-shopping-cart"></i>
-            
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product__desc">
-                                                <div class="product__rating">
-                                                    <i class="star-full"></i>
-                                                    <i class="star-full"></i>
-                                                    <i class="star-full"></i>
-                                                    <i class="star-full"></i>
-                                                    <i class="star-half"></i>
-                                                </div>
-                                                <a href="#" class="product__name">Suunto Spartan Trainer Wrist HR</a>
-                                                <div class="product__price-box">
-                                                    <span class="product__price">€214.44</span>
-                                                    <span class="product__price-sale">€171.55</span> 
-                                                </div>
-                                            </div>
-                                            <div class="product__flags">
-                                                <span class="product__onsale">On sale!</span>
-                                                <span class="product__discount">-20%</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-4 col-sm-6 col-xsm-12 pd-gap">
-                                        <div class="product-item">
-                                            <div class="product__thumb-container">
-                                                <a href="#" class="product__img">
-                                                    <img src="./assets/image/suunto-9-peak-granite-blue-titanium-1.png" alt="" class="img-main">
-                                                    <img src="./assets/image/suunto-9-peak-granite-blue-titanium-2.png" alt="" class="img-secondary">
-                                                </a>
-                                                <div class="product__functions">
-                                                    <div class="product__wishlist">
-                                                        <i class="fas fa-heart"></i>
-                                                    </div>
-                                                    <div class="product__quickview">
-                                                        <i class="fas fa-eye"></i>
-                                                    </div>
-                                                    <div class="product__cart">
-                                                        <i class="fas fa-shopping-cart"></i>
-            
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product__desc">
-                                                <div class="product__rating">
-                                                    <i class="star-full"></i>
-                                                    <i class="star-full"></i>
-                                                    <i class="star-full"></i>
-                                                    <i class="star-full"></i>
-                                                    <i class="star-full"></i>
-                                                </div>
-                                                <a href="#" class="product__name">Suunto 9 Baro & Peak</a>
-                                                <div class="product__price-box">
-                                                    <span class="product__price">€530.34</span>
-                                                    <span class="product__price-sale">€477.30</span> 
-                                                </div>
-                                            </div>
-                                            <div class="product__flags">
-                                                <span class="product__onsale">On sale!</span>
-                                                <span class="product__discount">-10%</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-4 col-sm-6 col-xsm-12 pd-gap">
-                                        <div class="product-item">
-                                            <div class="product__thumb-container">
-                                                <a href="#" class="product__img">
-                                                    <img src="./assets/image/archetype-nemesis-automatic-1.png" alt="" class="img-main">
-                                                    <img src="./assets/image/archetype-nemesis-automatic-2.jpg" alt="" class="img-secondary">
-                                                </a>
-                                                <div class="product__functions">
-                                                    <div class="product__wishlist">
-                                                        <i class="fas fa-heart"></i>
-                                                    </div>
-                                                    <div class="product__quickview">
-                                                        <i class="fas fa-eye"></i>
-                                                    </div>
-                                                    <div class="product__cart">
-                                                        <i class="fas fa-shopping-cart"></i>
-            
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product__desc">
-                                                <div class="product__rating">
-                                                    <i class="star-full"></i>
-                                                    <i class="star-full"></i>
-                                                    <i class="star-full"></i>
-                                                    <i class="star-full"></i>
-                                                    <i class="star-half"></i>
-                                                </div>
-                                                <a href="#" class="product__name">Archetype Nemesis Automatic Gunmetal Gray</a>
-                                                <div class="product__price-box">
-                                                    <span class="product__price">€364.00</span>
-                                                    <span class="product__price-sale">€245.80</span> 
-                                                </div>
-                                            </div>
-                                            <div class="product__flags">
-                                                <span class="product__onsale">On sale!</span>
-                                                <span class="product__discount">-5%</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-4 col-sm-6 col-xsm-12 pd-gap">
-                                        <div class="product-item">
-                                            <div class="product__thumb-container">
-                                                <a href="#" class="product__img">
-                                                    <img src="./assets/image/devon-tread-1E-1.png" alt="" class="img-main">
-                                                    <img src="./assets/image/devon-tread-1E-2.png" alt="" class="img-secondary">
-                                                </a>
-                                                <div class="product__functions">
-                                                    <div class="product__wishlist">
-                                                        <i class="fas fa-heart"></i>
-                                                    </div>
-                                                    <div class="product__quickview">
-                                                        <i class="fas fa-eye"></i>
-                                                    </div>
-                                                    <div class="product__cart">
-                                                        <i class="fas fa-shopping-cart"></i>
-            
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product__desc">
-                                                <div class="product__rating">
-                                                    <i class="star-full"></i>
-                                                    <i class="star-full"></i>
-                                                    <i class="star-full"></i>
-                                                    <i class="star-full"></i>
-                                                    <i class="star-full"></i>
-                                                </div>
-                                                <a href="#" class="product__name">Devon Tread 1E</a>
-                                                <div class="product__price-box">
-                                                    <span class="product__price">€18154.50</span>
-                                                    <span class="product__price-sale">€14523.60</span> 
-                                                </div>
-                                            </div>
-                                            <div class="product__flags">
-                                                <span class="product__onsale">On sale!</span>
-                                                <span class="product__discount">-20%</span>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="products__showmore">Show More</div>
                             </div>

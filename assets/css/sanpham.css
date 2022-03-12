@@ -78,6 +78,14 @@
     margin-right: 10px;
 }
 
+.color__box {
+    background-color: attr(data-color color);
+}
+
+.filter__item.active {
+    color: var(--green-light-color);
+}
+
 .filter__item:hover .size__box,
 .filter__item:hover .color__box,
 .filter__item.active .size__box,
@@ -105,7 +113,7 @@
 
 .filter__price-btn {
     display: block;
-    margin-top: 10px;
+    margin-top: 20px;
     padding: 5px 20px;
 }
 
@@ -156,7 +164,7 @@
 }
 
 .products__sort,
-.products__list {
+.products__list-type {
     align-items: center;
 }
 

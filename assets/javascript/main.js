@@ -86,6 +86,15 @@ function navbarControl() {
         overlay.classList.remove("active");
         html.classList.remove("dis-scroll");
     })
+    window.addEventListener("resize", () => {
+        const windownWidth = window.innerWidth;
+
+        if (windownWidth >= 992 && navbar.className.includes("active")) {
+            navbar.classList.remove("active");
+            overlay.classList.remove("active");
+            html.classList.remove("dis-scroll");
+        }
+    })
 };
 navbarControl();
 
@@ -95,7 +104,6 @@ function footerListControl() {
 
     footerDrop.forEach((item) => {
         const footerTitle = item.querySelector(".footer__title");
-        const footerList = item.querySelector(".footer__list");
 
         footerTitle.addEventListener("click", () => {
             const footerDropActive = document.querySelector(".footer__content.active");

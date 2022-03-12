@@ -83,22 +83,21 @@ function renderProducts() {
         productList.innerHTML += abc.join(" ");
         modal();
     })
+
+    function renderStars(stars) {
+        var starsHTML = "";
+        for (let i=1; i<=5; i++) {
+            if (i<=stars)
+                starsHTML += `<i class="fas fa-star"></i> `;
+            else if (i-stars == 0.5)
+                starsHTML += `<i class="fas fa-star-half-alt"></i> `;
+            else
+                starsHTML += `<i class="far fa-star"></i> `;
+        }
+        return starsHTML;
+    }
 }
 renderProducts();
-
-
-function renderStars(stars) {
-    var starsHTML = "";
-    for (let i=1; i<=5; i++) {
-        if (i<=stars)
-            starsHTML += `<i class="fas fa-star"></i> `;
-        else if (i-stars == 0.5)
-            starsHTML += `<i class="fas fa-star-half-alt"></i> `;
-        else
-            starsHTML += `<i class="far fa-star"></i> `;
-    }
-    return starsHTML;
-}
 
 // SortControl
 function sortControl() {
@@ -153,6 +152,15 @@ function filterControl() {
         filterNav.classList.remove("active");
         overlay.classList.remove("active");
         html.classList.remove("dis-scroll");
+    })
+    window.addEventListener("resize", () => {
+        const windownWidth = window.innerWidth;
+
+        if (windownWidth >= 992 && filterNav.className.includes("active")) {
+            filterNav.classList.remove("active");
+            overlay.classList.remove("active");
+            html.classList.remove("dis-scroll");
+        }
     })
 
     function checkFilterItem() {

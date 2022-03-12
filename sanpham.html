@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản Phẩm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="./assets/css/sanpham.css">
+</head>
+<body>
+    <div id="modal">
+        <div id="wishlist-modal" class="wishlist-modal modal">
+            <div class="modal__close wishlist-modal-close">
+                <i class="fas fa-times"></i>
+            </div>
+            <p>The product was successfully added to your wishlist.</p>
+        </div>
+        <div id="quickview-modal" class="quickview-modal modal">
+            <div class="quickview-modal__container flex cl-gap">        
+                <div class="modal__close">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="col-6 col-sm-12 pd-gap">
+                    <div class="quickview__slider-container">
+                        <div class="quickview__mainimg">
+                            <img src="./assets/image/suunto-9-peak-granite-blue-titanium-1.png" alt="">
+                        </div>
+                        <div class="quickview__slider">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="quickview-item active swiper-slide">
+                                        <div class="quickview__img">
+                                            <img src="./assets/image/suunto-9-peak-granite-blue-titanium-1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="quickview-item swiper-slide">
+                                        <div class="quickview__img">
+                                            <img src="./assets/image/suunto-9-peak-granite-blue-titanium-2.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="quickview-item swiper-slide">
+                                        <div class="quickview__img">
+                                            <img src="./assets/image/suunto-9-peak-granite-blue-titanium-3.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="quickview-item swiper-slide">
+                                        <div class="quickview__img">
+                                            <img src="./assets/image/suunto-9-peak-granite-blue-titanium-4.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="quickview-item swiper-slide">
+                                        <div class="quickview__img">
+                                            <img src="./assets/image/suunto-9-peak-granite-blue-titanium-5.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="quickview-item swiper-slide">
+                                        <div class="quickview__img">
+                                            <img src="./assets/image/suunto-9-peak-granite-blue-titanium-6.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="quickview__navigation">
+                                <i class="fas fa-long-arrow-alt-left swiper-prev"></i>
+                                <i class="fas fa-long-arrow-alt-right swiper-next"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-12 pd-gap">
+                    <div class="quickview__detail">
+                        <h1 class="quickview__name">Suunto 9 Baro & Peak</h1>
+                        <div class="quickview__price-box">
+                            <span class="quickview__price">€530.34</span>
+                            <span class="quickview__price-sale">€477.30</span>
+                            <span class="quickview__discount">Save 10%</span>
+                        </div>
+                        <p class="quickview__desc">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                        <form action="#" method="get" class="quickview__action">
+                            <div class="quickview__size">
+                                <span class="size__title action__title">Size</span>
+                                <div class="size__list action__list flex">
+                                    <div class="size-item action__item active">
+                                        <input type="radio" name="size" value="43mm" checked class="action__input">
+                                        43mm
+                                    </div>
+                                    <div class="size-item action__item">
+                                        <input type="radio" name="size" value="50mm" class="action__input">
+                                        50mm
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="quickview__color">
+                                <span class="color__title action__title">Color</span>
+                                <div class="color__list action__list flex">
+                                    <div class="color-item action__item active">
+                                        <input type="radio" name="color" value="white" checked class="action__input">
+                                    </div>
+                                    <div class="color-item action__item">
+                                        <input type="radio" name="color" value="red" class="action__input">
+                                    </div>
+                                    <div class="color-item action__item">
+                                        <input type="radio" name="color" value="black" class="action__input">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="quickview__quantity">
+                                <div class="quantity">
+                                    <input type="text" name="qty" value="1" class="quantity__input">
+                                    <div class="quantity__btns">
+                                        <i class="fas fa-angle-up quantity-up"></i>
+                                        <i class="fas fa-angle-down quantity-down"></i>
+                                    </div>
+                                </div>
+                                <button type="submit" class="button button-gb addCart">Add To Cart</button>
+                            </div>
+                        </form>
+                        <div class="quickview__social">
+                            <a href="#" class="social-item facebook-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-item twitter-icon">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-item google-icon">
+                                <i class="fab fa-google-plus-g"></i>
+                            </a>
+                            <a href="#" class="social-item instagram-icon">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="blockcart-modal" class="blockcart-modal modal">
+            <div class="blockcart__container">
+                <div class="modal__close">
+                    <i class="fas fa-times"></i>
+                </div>
+                <h3 class="blockcart__title">
+                    <i class="fas fa-check"></i>
+                    Product successfully added to your shopping cart
+                </h3>
+                <div class="blockcart__body flex cl-gap">
+                    <div class="col-6 col-xsm-12 pd-gap">
+                        <div class="blockcart__body-left flex">
+                            <div class="col-6 col-sm-12 pd-gap">
+                                <div class="blockcart__img">
+                                    <img src="./assets/image/suunto-9-peak-granite-blue-titanium-1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-12 pd-gap">
+                                <div class="blockcart__info">
+                                    <h3 class="blockcart__name">Suunto 9 Baro & Peak</h3>
+                                    <div class="blockcart__price-box">
+                                        <span class="blockcart__price">€530.34</span>
+                                        <span class="blockcart__price-sale">€477.30</span>
+                                    </div>
+                                    <p class="blockcart__label blockcart__size">
+                                        Size:
+                                        <span>43mm</span>
+                                    </p>
+                                    <p class="blockcart__label blockcart__color">
+                                        Color:
+                                        <span>Black</span>
+                                    </p>
+                                    <p class="blockcart__label blockcart__qty">
+                                        Quantitu:
+                                        <span>1</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-xsm-12 pd-gap">
+                        <div class="blockcart__body-right">
+                            <p class="blockcart__count">There are <span>3</span> items in your cart.</p>
+                            <p class="blockcart__subtotal">
+                                Subtotal:
+                                <span>€485.00</span>
+                            </p>
+                            <p class="blockcart__shipping">
+                                shipping:
+                                <span>Free</span>
+                            </p>
+                            <p class="blockcart__total">
+                                Total:
+                                <span>€485.00</span>
+                            </p>    
+                            <div class="blockcart__btns">
+                                <button class="button button-gb blockcart__continueBtn">Continue Shopping</button>
+                                <a href="#" class="button button-bg blockcart__checkoutBtn">Proceed to checkout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="navbar" class="navbar">
+        <div class="navbar__title">
+            <i class="fas fa-times navbar__close"></i>
+            <span>Menu</span>
+        </div>
+        <div class="navbar__menu">
+            <a href="#" class="navber__menu-item">Home</a>
+            <a href="#" class="navber__menu-item">Men Watches</a>
+            <a href="#" class="navber__menu-item">Womem Watches</a>
+            <a href="#" class="navber__menu-item">Luxury Watches</a>
+            <a href="#" class="navber__menu-item">About Us</a>
+            <a href="#" class="navber__menu-item">Manager</a>
+            <a href="#" class="navber__menu-item">Sign In</a>
+        </div>
+    </div>
+    <div id="overlay"></div>
+    <header id="header">
+        <div class="header-top">
+            <div class="container header-top-container flex">
+                <div class="navbar__open">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <a href="#" class="header__logo-box">
+                    <img src="./assets/image/Logo.jpg" alt="Logo" class="header__logo">
+                </a>
+                <div class="header__search">
+                    <div class="header__search__container">
+                        <form action="#" method="get">
+                            <input type="text" name="search" value="" placeholder="Search our catalog" autocomplete="off" class="search__input">
+                            <button type="submit" class="search__btn">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="header__widget flex">
+                    <div class="header__contact flex hide-md">
+                        <div class="contact__icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact__desc">
+                            <p class="contact__title">Call Us:</p>
+                            <p class="contact__text">91 89563 24789</p>
+                        </div>
+                    </div>
+                    <div class="header__cart">
+                        <div class="cart__link">
+                            <i class="fas fa-shopping-cart cart__icon"></i>
+                            <span class="cart__count">3</span>
+                        </div>
+                        <div class="cart__dropdown">
+                            <div class="cart__scroll">
+                                <div class="cart__item flex">
+                                    <a href="#" class="cart-img">
+                                        <img src="./assets/image/suunto-spartan-trainer-wrist-hr-black-techwear-1.png" alt="">
+                                    </a>
+                                    <div class="cart-info">
+                                        <a href="#"class="cart-name">Suunto Spartan Trainer Wrist HR Black</a>
+                                        <p class="cart-price">€171.55</p>
+                                        <p class="cart-qty">
+                                            Quantity: 
+                                            <span class="cart-qty-number">1</span>
+                                        </p>
+                                    </div>
+                                    <div class="cart-remove">
+                                        <i class="fas fa-times"></i>
+                                    </div>
+                                </div>
+                                <div class="cart__item flex">
+                                    <a href="#" class="cart-img">
+                                        <img src="./assets/image/suunto-9-peak-granite-blue-titanium-1.png" alt="">
+                                    </a>
+                                    <div class="cart-info">
+                                        <a href="#"class="cart-name">Suunto Spartan Trainer Wrist HR Black</a>
+                                        <p class="cart-price">€477.30</p>
+                                        <p class="cart-qty">
+                                            Quantity: 
+                                            <span class="cart-qty-number">1</span>
+                                        </p>
+                                    </div>
+                                    <div class="cart-remove">
+                                        <i class="fas fa-times"></i>
+                                    </div>
+                                </div>
+                                <div class="cart__item flex">
+                                    <a href="#" class="cart-img">
+                                        <img src="./assets/image/archetype-nemesis-automatic-1.png" alt="">
+                                    </a>
+                                    <div class="cart-info">
+                                        <a href="#"class="cart-name">Suunto Spartan Trainer Wrist HR Black</a>
+                                        <p class="cart-price">€245.80</p>
+                                        <p class="cart-qty">
+                                            Quantity: 
+                                            <span class="cart-qty-number">1</span>
+                                        </p>
+                                    </div>
+                                    <div class="cart-remove">
+                                        <i class="fas fa-times"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart__sumary">
+                                <div class="cart__sumary-items">
+                                    <span>3 items</span>
+                                    <span class="cart__items-price">€894.65</span>
+                                </div>
+                                <div class="cart__sumary-ship">
+                                    <span>Shipping</span>
+                                    <span class="cart__ship-price">€15.00</span>
+                                </div>
+                            </div>
+                            <div class="cart__total">
+                                <span>Total</span>
+                                <span class="cart__ship-price">€879.65</span>
+                            </div>
+                            <div class="cart__view">
+                                <button class="button button-gb">View Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom hide-md">
+            <div class="container header-bottom-container">
+                <ul class="header__menu">
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Home</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Men watches</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Women watches</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Luxury watches</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">About us</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Manager</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Sign in</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a href="#" class="submenu__link">
+                                    <i class="fas fa-cog"></i>
+                                    Settings
+                                </a>
+                            </li>
+                            <li class="submenu__item">
+                                <a href="#" class="submenu__link">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    Sign out
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main id="main">
+        <section class="wrapper">
+            <div class="container">
+                <div class="flex cl-gap">
+                    <div class="col-3 col-md-12 pd-gap">
+                        <div class="column-left">
+                            <div class="search-filter">
+                                <h3 class="search-filter__title flex">
+                                    <span>Filter By</span>
+                                    <i class="fas fa-times search-filter__close"></i>
+                                </h3>
+                                <div class="search-filter__content">
+                                    <div class="search-filter-clearall">
+                                        <i class="fas fa-times"></i>
+                                        Clear All
+                                    </div>
+                                    <div class="filter__color">
+                                        <h4 class="filter__title">Color</h4>
+                                        <div class="filter__desc">
+                                            <div class="filter__item">
+                                                <span class="color__box">
+                                                    <i class="fas fa-check filter-check-icon"></i>
+                                                </span>
+                                                <span class="color__name">Grey</span>
+                                                <span class="color__qty">(7)</span>
+                                            </div>
+                                            <div class="filter__item">
+                                                <span class="color__box">
+                                                    <i class="fas fa-check filter-check-icon"></i>
+                                                </span>
+                                                <span class="color__name">White</span>
+                                                <span class="color__qty">(6)</span>
+                                            </div>
+                                            <div class="filter__item">
+                                                <span class="color__box">
+                                                    <i class="fas fa-check filter-check-icon"></i>
+                                                </span>
+                                                <span class="color__name">Red</span>
+                                                <span class="color__qty">(5)</span>
+                                            </div>
+                                            <div class="filter__item">
+                                                <span class="color__box">
+                                                    <i class="fas fa-check filter-check-icon"></i>
+                                                </span>
+                                                <span class="color__name">Black</span>
+                                                <span class="color__qty">(3)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter__price">
+                                        <h4 class="filter__title">Price</h4>
+                                        <div class="filter__desc">
+                                            <div class="filter__price-input flex">
+                                                <input type="text" name="priceFrom" maxlength="13" placeholder="€ From">
+                                                <div class="seperate">-</div>
+                                                <input type="text" name="priceTo" maxlength="13" placeholder="€ To">
+                                            </div>
+                                            <div class="button button-gb filter__price-btn">Apply</div>
+                                        </div>
+                                    </div>
+                                    <div class="filter__size">
+                                        <h4 class="filter__title">Size</h4>
+                                        <div class="filter__desc">
+                                            <div class="filter__item">
+                                                <span class="size__box">
+                                                    <i class="fas fa-check filter-check-icon"></i>
+                                                </span>
+                                                <span class="size__name">S</span>
+                                                <span class="size__qty">(3)</span>
+                                            </div>
+                                            <div class="filter__item">
+                                                <span class="size__box">
+                                                    <i class="fas fa-check filter-check-icon"></i>
+                                                </span>
+                                                <span class="size__name">M</span>
+                                                <span class="size__qty">(3)</span>
+                                            </div>
+                                            <div class="filter__item">
+                                                <span class="size__box">
+                                                    <i class="fas fa-check filter-check-icon"></i>
+                                                </span>
+                                                <span class="size__name">L</span>
+                                                <span class="size__qty">(4)</span>
+                                            </div>
+                                            <div class="filter__item">
+                                                <span class="size__box">
+                                                    <i class="fas fa-check filter-check-icon"></i>
+                                                </span>
+                                                <span class="size__name">XLS</span>
+                                                <span class="size__qty">(3)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="left-banner hide-md">
+                                <img src="./assets/image/left-banner-1.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-9 col-md-12 pd-gap">
+                        <div class="column-right">
+                            <div class="categories__banner">
+                                <img src="./assets/image/banner-products.jpg" alt="">
+                            </div>
+                            <h3 class="categories__title">Men Watches</h3>
+                            <p class="categories__desc">The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable that it has a more-or-less normal distribution of letters.</p>
+                            <div class="products">
+                                <div class="products__list-sort flex">
+                                    <div class="col-6 col-md-12">
+                                        <div class="products__list flex">
+                                            <i class="fas fa-th-large list-icon list-icon-grid active"></i>
+                                            <i class="fas fa-th-list list-icon list-icon-list"></i>
+                                            <span class="products__list-qty">
+                                                There are <span class="list-qty">9</span> products.
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-12">  
+                                        <div class="products__sort flex">
+                                            <span class="sort-text">Sort by:</span>
+                                            <div class="sort-select">
+                                                <div class="sort__title">
+                                                    <span class="sort__value">Auto</span>
+                                                    <i class="fas fa-caret-down"></i>
+                                                </div>
+                                                <div class="sort__list">
+                                                    <div class="sort-item active" data-value="auto">Auto</div>
+                                                    <div class="sort-item" data-value="atoz">Name, A to Z</div>
+                                                    <div class="sort-item" data-value="ztoa">Name, Z to A</div>
+                                                    <div class="sort-item" data-value="ltoh">Price, low to high</div>
+                                                    <div class="sort-item" data-value="htol">Price, high to low</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="search-filter__open">
+                                            <div class="button button-gb">Filter</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="products__active-filter flex">
+                                    <span class="active-filter__title">Active filtes</span>
+                                    <div class="active-filter__list flex">
+                                        <div class="filter-item">
+                                            <span class="filter-item__name">Color: Grey</span>
+                                            <i class="fas fa-times filter-item__close"></i>
+                                        </div>
+                                        <div class="filter-item">
+                                            <span class="filter-item__name">Color: Black</span>
+                                            <i class="fas fa-times filter-item__close"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="products__list flex cl-gap">
+                                    <div class="col-4 col-sm-6 col-xsm-12 pd-gap">
+                                        <div class="product-item">
+                                            <div class="product__thumb-container">
+                                                <a href="#" class="product__img">
+                                                    <img src="./assets/image/suunto-spartan-trainer-wrist-hr-black-techwear-1.png" alt="" class="img-main">
+                                                    <img src="./assets/image/suunto-spartan-trainer-wrist-hr-black-techwear-2.png" alt="" class="img-secondary">
+                                                </a>
+                                                <div class="product__functions">
+                                                    <div class="product__wishlist">
+                                                        <i class="fas fa-heart"></i>
+                                                    </div>
+                                                    <div class="product__quickview">
+                                                        <i class="fas fa-eye"></i>
+                                                    </div>
+                                                    <div class="product__cart">
+                                                        <i class="fas fa-shopping-cart"></i>
+            
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product__desc">
+                                                <div class="product__rating">
+                                                    <i class="star-full"></i>
+                                                    <i class="star-full"></i>
+                                                    <i class="star-full"></i>
+                                                    <i class="star-full"></i>
+                                                    <i class="star-half"></i>
+                                                </div>
+                                                <a href="#" class="product__name">Suunto Spartan Trainer Wrist HR</a>
+                                                <div class="product__price-box">
+                                                    <span class="product__price">€214.44</span>
+                                                    <span class="product__price-sale">€171.55</span> 
+                                                </div>
+                                            </div>
+                                            <div class="product__flags">
+                                                <span class="product__onsale">On sale!</span>
+                                                <span class="product__discount">-20%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-sm-6 col-xsm-12 pd-gap">
+                                        <div class="product-item">
+                                            <div class="product__thumb-container">
+                                                <a href="#" class="product__img">
+                                                    <img src="./assets/image/suunto-9-peak-granite-blue-titanium-1.png" alt="" class="img-main">
+                                                    <img src="./assets/image/suunto-9-peak-granite-blue-titanium-2.png" alt="" class="img-secondary">
+                                                </a>
+                                                <div class="product__functions">
+                                                    <div class="product__wishlist">
+                                                        <i class="fas fa-heart"></i>
+                                                    </div>
+                                                    <div class="product__quickview">
+                                                        <i class="fas fa-eye"></i>
+                                                    </div>
+                                                    <div class="product__cart">
+                                                        <i class="fas fa-shopping-cart"></i>
+            
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product__desc">
+                                                <div class="product__rating">
+                                                    <i class="star-full"></i>
+                                                    <i class="star-full"></i>
+                                                    <i class="star-full"></i>
+                                                    <i class="star-full"></i>
+                                                    <i class="star-full"></i>
+                                                </div>
+                                                <a href="#" class="product__name">Suunto 9 Baro & Peak</a>
+                                                <div class="product__price-box">
+                                                    <span class="product__price">€530.34</span>
+                                                    <span class="product__price-sale">€477.30</span> 
+                                                </div>
+                                            </div>
+                                            <div class="product__flags">
+                                                <span class="product__onsale">On sale!</span>
+                                                <span class="product__discount">-10%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-sm-6 col-xsm-12 pd-gap">
+                                        <div class="product-item">
+                                            <div class="product__thumb-container">
+                                                <a href="#" class="product__img">
+                                                    <img src="./assets/image/archetype-nemesis-automatic-1.png" alt="" class="img-main">
+                                                    <img src="./assets/image/archetype-nemesis-automatic-2.jpg" alt="" class="img-secondary">
+                                                </a>
+                                                <div class="product__functions">
+                                                    <div class="product__wishlist">
+                                                        <i class="fas fa-heart"></i>
+                                                    </div>
+                                                    <div class="product__quickview">
+                                                        <i class="fas fa-eye"></i>
+                                                    </div>
+                                                    <div class="product__cart">
+                                                        <i class="fas fa-shopping-cart"></i>
+            
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product__desc">
+                                                <div class="product__rating">
+                                                    <i class="star-full"></i>
+                                                    <i class="star-full"></i>
+                                                    <i class="star-full"></i>
+                                                    <i class="star-full"></i>
+                                                    <i class="star-half"></i>
+                                                </div>
+                                                <a href="#" class="product__name">Archetype Nemesis Automatic Gunmetal Gray</a>
+                                                <div class="product__price-box">
+                                                    <span class="product__price">€364.00</span>
+                                                    <span class="product__price-sale">€245.80</span> 
+                                                </div>
+                                            </div>
+                                            <div class="product__flags">
+                                                <span class="product__onsale">On sale!</span>
+                                                <span class="product__discount">-5%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-sm-6 col-xsm-12 pd-gap">
+                                        <div class="product-item">
+                                            <div class="product__thumb-container">
+                                                <a href="#" class="product__img">
+                                                    <img src="./assets/image/devon-tread-1E-1.png" alt="" class="img-main">
+                                                    <img src="./assets/image/devon-tread-1E-2.png" alt="" class="img-secondary">
+                                                </a>
+                                                <div class="product__functions">
+                                                    <div class="product__wishlist">
+                                                        <i class="fas fa-heart"></i>
+                                                    </div>
+                                                    <div class="product__quickview">
+                                                        <i class="fas fa-eye"></i>
+                                                    </div>
+                                                    <div class="product__cart">
+                                                        <i class="fas fa-shopping-cart"></i>
+            
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="product__desc">
+                                                <div class="product__rating">
+                                                    <i class="star-full"></i>
+                                                    <i class="star-full"></i>
+                                                    <i class="star-full"></i>
+                                                    <i class="star-full"></i>
+                                                    <i class="star-full"></i>
+                                                </div>
+                                                <a href="#" class="product__name">Devon Tread 1E</a>
+                                                <div class="product__price-box">
+                                                    <span class="product__price">€18154.50</span>
+                                                    <span class="product__price-sale">€14523.60</span> 
+                                                </div>
+                                            </div>
+                                            <div class="product__flags">
+                                                <span class="product__onsale">On sale!</span>
+                                                <span class="product__discount">-20%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="products__showmore">Show More</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="container">
+            <div class="footer__container">
+                <div class="flex cl-gap">
+                    <div class="col-3 col-md-12 pd-gap">
+                        <div class="footer__content footer__contact has-drop">
+                            <h3 class="footer__title">
+                                Contact Us
+                                <i class="fas fa-angle-right footer__title-icon"></i>
+                            </h3>
+                            <ul class="footer__list">
+                                <li>
+                                    <i class="fas fa-map-marker-alt location-icon"></i>
+                                    <span>
+                                        Vigils - Watch Store
+                                        <br>
+                                        United States
+                                    </span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-phone-alt"></i>
+                                    <span>000-000-0000</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-fax"></i>
+                                    <span>123456</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-envelope"></i>
+                                    <span>sales@yourcompany.com</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-3 col-md-12 pd-gap">
+                        <div class="footer__content footer__links has-drop">
+                            <h3 class="footer__title">
+                                Products
+                                <i class="fas fa-angle-right footer__title-icon"></i>
+                            </h3>
+                            <ul class="footer__list">
+                                <li>
+                                    <a href="#" class="footer__link">
+                                        <i class="fas fa-angle-right"></i>
+                                        <span>Prices drop</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">
+                                        <i class="fas fa-angle-right"></i>
+                                        <span>New product</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">
+                                        <i class="fas fa-angle-right"></i>
+                                        <span>Best sale</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">
+                                        <i class="fas fa-angle-right"></i>
+                                        <span>Contact us</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">
+                                        <i class="fas fa-angle-right"></i>
+                                        <span>Sitemap</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-3 col-md-12 pd-gap">
+                        <div class="footer__content footer__links has-drop">
+                            <h3 class="footer__title">
+                                Our Company
+                                <i class="fas fa-angle-right footer__title-icon"></i>
+                            </h3>
+                            <ul class="footer__list">
+                                <li>
+                                    <a href="#" class="footer__link">
+                                        <i class="fas fa-angle-right"></i>
+                                        <span>Delivery</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">
+                                        <i class="fas fa-angle-right"></i>
+                                        <span>Legal Notice</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">
+                                        <i class="fas fa-angle-right"></i>
+                                        <span>Terms and conditions of use</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">
+                                        <i class="fas fa-angle-right"></i>
+                                        <span>About us</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">
+                                        <i class="fas fa-angle-right"></i>
+                                        <span>Secure payment</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-3 col-md-12 pd-gap">
+                        <div class="footer__content footer__newsletter">
+                            <h3 class="footer__title">Join Our Newsletter</h3>
+                            <span class="footer__subtitle">There are many variations of passages Lorem Ipsum available</span>
+                            <div class="footer__mail">
+                                <form action="#" method="get">
+                                    <input type="text" name="mail" placeholder="Enter Email" class="mail__input">
+                                    <button type="submit" class="mail__btn">SEND</button>
+                                </form>
+                                <p class="alert">Invalid email address.</p>
+                            </div>
+                            <div class="footer__social">
+                                <a href="#" class="social-item">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-item">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="social-item">
+                                    <i class="fab fa-google-plus-g"></i>
+                                </a>
+                                <a href="#" class="social-item">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <a href="#"class="footer__copyright">
+                    <span>© 2022 - Ecommerce software by PrestaShop™</span>
+                </a>
+                <div class="footer__payments">
+                    <a href="#" class="footer__payment">
+                        <img src="./assets/image/master_card.png" alt="">
+                    </a>
+                    <a href="#" class="footer__payment">
+                        <img src="./assets/image/world_pay.png" alt="">
+                    </a>
+                    <a href="#" class="footer__payment">
+                        <img src="./assets/image/western_union.png" alt="">
+                    </a>
+                    <a href="#" class="footer__payment">
+                        <img src="./assets/image/american_express.png" alt="">
+                    </a>
+                    <a href="#" class="footer__payment">
+                        <img src="./assets/image/visa.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a href="#" id="scrollup" class="scrollup">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./assets/javascript/main.js"></script>
+    <script src="./assets/javascript/sanpham.js"></script>
+</body>
+</html>

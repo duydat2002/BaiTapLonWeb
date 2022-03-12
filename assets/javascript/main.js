@@ -6,7 +6,7 @@ function scrollHeader() {
 
     window.addEventListener("scroll", () => {
         if (window.innerWidth <= 991) {
-            if (this.scrollY >= 160) {
+            if (this.scrollY >= 85) {
                 headerTop.classList.add("active");
                 cartDropdown.classList.remove("active");
             }
@@ -66,21 +66,25 @@ function navbarControl() {
     const navbarOpen = document.querySelector(".navbar__open");
     const navbarClose = document.querySelector(".navbar__close");
     const overlay = document.querySelector("#overlay");
+    const html = document.querySelector("html");
     
     navbarOpen.onclick = () => {
         navbar.classList.add("active");
         overlay.classList.add("active");
+        html.classList.add("dis-scroll");
     }
     
     if (navbarClose) {
         navbarClose.onclick = () => {
             navbar.classList.remove("active");
             overlay.classList.remove("active");
+            html.classList.remove("dis-scroll");
         }    
     }
     overlay.onclick = (e) => {
         navbar.classList.remove("active");
         overlay.classList.remove("active");
+        html.classList.remove("dis-scroll");
     }
 };
 navbarControl();
@@ -243,12 +247,22 @@ function swiperSlider() {
 
     const quickviewSwiper = new Swiper('.quickview__slider .swiper', {
         speed: 500,
-        slidesPerView: 4,
+        slidesPerView: 2,
         spaceBetween: 10,
         navigation: {
             nextEl: '.quickview__slider .swiper-next',
             prevEl: '.quickview__slider .swiper-prev',
         },
+        breakpoints: {
+            576: {
+                slidesPerView: 3,
+                spaceBetween: 10
+            },
+            992: {
+                slidesPerView: 4,
+                spaceBetween: 10
+            },
+        }
     });
 };
 swiperSlider();
@@ -273,21 +287,25 @@ function modal() {
     const wishlist = document.querySelector("#wishlist-modal");
     const quickview = document.querySelector("#quickview-modal");
     const blockcart = document.querySelector("#blockcart-modal");
+    const html = document.querySelector("html");
 
     modal.onclick = (e) => {
         if (!wishlist.contains(e.target) && wishlist.className.includes("active")) {
             modal.classList.remove("active");
             wishlist.classList.remove("active");
+            html.classList.remove("dis-scroll");
         }
 
         if (!quickview.contains(e.target) && quickview.className.includes("active")) {
             modal.classList.remove("active");
             quickview.classList.remove("active");
+            html.classList.remove("dis-scroll");
         }
 
         if (!blockcart.contains(e.target) && blockcart.className.includes("active")) {
             modal.classList.remove("active");
             blockcart.classList.remove("active");
+            html.classList.remove("dis-scroll");
         }
     }
 
@@ -299,12 +317,14 @@ function modal() {
             item.onclick = () => {
                 modal.classList.add("active");
                 wishlist.classList.add("active");
+                html.classList.add("dis-scroll");
             }
         })
         
         wishlistClose.onclick = () =>  {
             modal.classList.remove("active");
             wishlist.classList.remove("active");
+            html.classList.remove("dis-scroll");
         }
     };
     wishlistControl();
@@ -317,6 +337,7 @@ function modal() {
             item.onclick = () => {
                 modal.classList.add("active");
                 quickview.classList.add("active");
+                html.classList.add("dis-scroll");
                 quickviewAction();
             }
         })
@@ -324,6 +345,7 @@ function modal() {
         quickviewClose.onclick = () =>  {
             modal.classList.remove("active");
             quickview.classList.remove("active");
+            html.classList.remove("dis-scroll");
         }  
     
         function quickviewAction() {
@@ -385,16 +407,19 @@ function modal() {
             item.onclick = () => {
                 modal.classList.add("active");
                 blockcart.classList.add("active");
+                html.classList.add("dis-scroll");
             }
         })
         
         blockcartClose.onclick = () =>  {
             modal.classList.remove("active");
             blockcart.classList.remove("active");
+            html.classList.remove("dis-scroll");
         }
         blockcartContinue.onclick = () =>  {
             modal.classList.remove("active");
             blockcart.classList.remove("active");
+            html.classList.remove("dis-scroll");
         }
     };
     blockcartControl();

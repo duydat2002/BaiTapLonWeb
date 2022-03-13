@@ -28,14 +28,19 @@ scrollHeader();
 function searchControl() {
     const searchContainer = document.querySelector(".header__search");
     const searchBtn = document.querySelector(".search__btn");
+    const searchBtnXSM = document.querySelector(".header__search__open");
     const searchInput = document.querySelector(".search__input");
 
     searchBtn.addEventListener("click", () => {
-        if (window.innerWidth <= 991) {
+        if (576 <= window.innerWidth && window.innerWidth <= 991) {
             searchContainer.classList.toggle("active");
             if (searchInput.value == "")
                 return false;
         }
+    })
+
+    searchBtnXSM.addEventListener("click", () => {
+        searchContainer.classList.toggle("active");
     })
 };
 searchControl();
@@ -55,10 +60,26 @@ function cartControl() {
             cartDropdown.classList.remove("active");
         }
     })
-
-
 };
 cartControl();
+
+// Account Header Control
+function headerAccountControl() {
+    const headerAccountBtn = document.querySelector(".account__link");
+    const headerAccountDropdown = document.querySelector(".account__dropdown");
+    
+    headerAccountBtn.addEventListener("click", () => {
+        headerAccountDropdown.classList.toggle("active");
+    })
+    
+    window.addEventListener("click", (e) => {
+        const headerAccount = document.querySelector(".header__account");
+        if (!headerAccount.contains(e.target)) {
+            headerAccountDropdown.classList.remove("active");
+        }
+    })
+};
+headerAccountControl();
 
 // Navbar Control
 function navbarControl() {

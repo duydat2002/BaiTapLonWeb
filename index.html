@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Watch Store</title>
     <link rel="stylesheet" href="./assets/css/home.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
-
+    <link rel="stylesheet" href="./assets/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css"/>
 </head>
 <body>
     <div id="modal">
@@ -206,15 +205,14 @@
             <i class="fas fa-times navbar__close"></i>
             <span>Menu</span>
         </div>
-        <div class="navbar__menu">
-            <a href="#" class="navber__menu-item">Home</a>
-            <a href="#" class="navber__menu-item">Men Watches</a>
-            <a href="#" class="navber__menu-item">Womem Watches</a>
-            <a href="#" class="navber__menu-item">Luxury Watches</a>
-            <a href="#" class="navber__menu-item">About Us</a>
-            <a href="#" class="navber__menu-item">Manager</a>
-            <a href="#" class="navber__menu-item">Sign In</a>
-        </div>
+        <ul class="navbar__menu">
+            <a href="index.html" class="navbar-item">Home</a>
+            <a href="#" class="navbar-item">Men Watches</a>
+            <a href="#" class="navbar-item">Womem Watches</a>
+            <a href="#" class="navbar-item">Sport Watches</a>
+            <a href="#" class="navbar-item">Luxury Watches</a>
+            <a href="#" class="navbar-item">About Us</a>
+        </ul>
     </div>
     <div id="overlay"></div>
     <header id="header">
@@ -223,7 +221,7 @@
                 <div class="navbar__open">
                     <i class="fas fa-bars"></i>
                 </div>
-                <a href="#" class="header__logo-box">
+                <a href="index.html" class="header__logo-box">
                     <img src="./assets/image/Logo.png" alt="Logo" class="header__logo">
                 </a>
                 <div class="header__search">
@@ -245,6 +243,9 @@
                             <p class="contact__title">Call Us:</p>
                             <p class="contact__text">91 89563 24789</p>
                         </div>
+                    </div>
+                    <div class="header__search__open">
+                        <i class="fas fa-search"></i>
                     </div>
                     <div class="header__cart">
                         <div class="cart__link">
@@ -317,7 +318,41 @@
                                 <span class="cart__ship-price">€879.65</span>
                             </div>
                             <div class="cart__view">
-                                <button class="button button-gb">View Cart</button>
+                                <a href="#" class="button button-gb">View Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__account">
+                        <div class="account__link">
+                            <i class="fas fa-user account__icon"></i>
+                        </div>
+                        <div class="account__dropdown">
+                            <div class="account__list">
+                                <p class="account__name">Phạm Duy Đạt</p>
+                                <a href="#" class="account-item">
+                                    <i class="fas fa-user-plus"></i>
+                                    Sign Up
+                                </a>
+                                <a href="#" class="account-item">
+                                    <i class="fas fa-sign-in-alt"></i>
+                                    Sign In
+                                </a>
+                                <a href="#" class="account-item">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    Sign Out
+                                </a>
+                                <a href="#" class="account-item">
+                                    <i class="fas fa-heart"></i>
+                                    Wishlist
+                                </a>
+                                <a href="#" class="account-item">
+                                    <i class="fas fa-cog"></i>
+                                    Setting
+                                </a>
+                                <a href="#" class="account-item">
+                                    <i class="fas fa-user-cog"></i>
+                                    Manager
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -328,39 +363,22 @@
             <div class="container header-bottom-container">
                 <ul class="header__menu">
                     <li class="menu__item">
-                        <a href="#" class="menu__link">Home</a>
+                        <a href="index.html" class="menu__link">Home</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#" class="menu__link">Men watches</a>
+                        <a href="sanpham.html" class="menu__link">Men watches</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#" class="menu__link">Women watches</a>
+                        <a href="sanpham.html" class="menu__link">Women watches</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#" class="menu__link">Luxury watches</a>
+                        <a href="sanpham.html" class="menu__link">Sport watches</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="sanpham.html" class="menu__link">Luxury watches</a>
                     </li>
                     <li class="menu__item">
                         <a href="#" class="menu__link">About us</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">Manager</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">Sign in</a>
-                        <ul class="submenu">
-                            <li class="submenu__item">
-                                <a href="#" class="submenu__link">
-                                    <i class="fas fa-cog"></i>
-                                    Settings
-                                </a>
-                            </li>
-                            <li class="submenu__item">
-                                <a href="#" class="submenu__link">
-                                    <i class="fas fa-sign-out-alt"></i>
-                                    Sign out
-                                </a>
-                            </li>
-                        </ul>
                     </li>
                 </ul>
             </div>
@@ -372,7 +390,7 @@
                 <div class="swiper">
                     <div class="swiper-wrapper">
                         <div class="home-banner-item swiper-slide">
-                            <a href="#" class="home-banner__img">
+                            <a href="sanpham.html" class="home-banner__img">
                                 <img src="./assets/image/Slider-1.png" alt="">
                             </a>
                             <span class="home-banner__watermark">"Time is money.</span>
@@ -380,11 +398,11 @@
                                 <p class="home-banner__sale">20% Save</p>
                                 <p class="home-banner__title">Latest Smartwatch</p>
                                 <p class="home-banner__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sit doloremque, sequi deleniti reprehenderit ad omnis quis laboriosam!</p>
-                                <a href="#" class="home-banner__button button button-bg">Shop now</a>
+                                <a href="sanpham.html" class="home-banner__button button button-bg">Shop now</a>
                             </div>
                         </div>
                         <div class="home-banner-item swiper-slide">
-                            <a href="#"class="home-banner__img">
+                            <a href="sanpham.html"class="home-banner__img">
                                 <img src="./assets/image/Slider-2.png" alt="">
                             </a>
                             <span class="home-banner__watermark">"Time is money.</span>
@@ -392,7 +410,7 @@
                                 <p class="home-banner__sale">20% Save</p>
                                 <p class="home-banner__title">Couple Watch</p>
                                 <p class="home-banner__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam sit doloremque, sequi deleniti reprehenderit ad omnis quis laboriosam!</p>
-                                <a href="#" class="home-banner__button button button-bg">Shop now</a>
+                                <a href="sanpham.html" class="home-banner__button button button-bg">Shop now</a>
                             </div>
                         </div>
                     </div>
@@ -424,38 +442,38 @@
                             <div class="swiper">
                                 <div class="swiper-wrapper">
                                     <div class="categories-item swiper-slide">
-                                        <a href="#" class="categories__img">
+                                        <a href="sanpham.html" class="categories__img">
                                             <img src="./assets/image/Categories-1.png" alt="">
                                         </a>
                                         <div class="categories__desc">
-                                            <a href="#" class="categories__name">Men Watches</a>
+                                            <a href="sanpham.html" class="categories__name">Men Watches</a>
                                             <span class="categoies__qty">15 Items</span>
                                         </div>
                                     </div>
                                     <div class="categories-item swiper-slide">
-                                        <a href="#" class="categories__img">
+                                        <a href="sanpham.html" class="categories__img">
                                             <img src="./assets/image/Categories-2.png" alt="">
                                         </a>
                                         <div class="categories__desc">
-                                            <a href="#" class="categories__name">Women Watches</a>
+                                            <a href="sanpham.html" class="categories__name">Women Watches</a>
                                             <span class="categoies__qty">12 Items</span>
                                         </div>
                                     </div>
                                     <div class="categories-item swiper-slide">
-                                        <a href="#" class="categories__img">
+                                        <a href="sanpham.html" class="categories__img">
                                             <img src="./assets/image/Categories-3.png" alt="">
                                         </a>
                                         <div class="categories__desc">
-                                            <a href="#" class="categories__name">Luxury Watches</a>
+                                            <a href="sanpham.html" class="categories__name">Luxury Watches</a>
                                             <span class="categoies__qty">25 Items</span>
                                         </div>
                                     </div>
                                     <div class="categories-item swiper-slide">
-                                        <a href="#" class="categories__img">
+                                        <a href="sanpham.html" class="categories__img">
                                             <img src="./assets/image/Categories-4.png" alt="">
                                         </a>
                                         <div class="categories__desc">
-                                            <a href="#" class="categories__name">Watches</a>
+                                            <a href="sanpham.html" class="categories__name">Watches</a>
                                             <span class="categoies__qty">40 Items</span>
                                         </div>
                                     </div>
@@ -676,7 +694,7 @@
                 <div class="banner__row row-1 flex cl-gap">
                     <div class="col-8 col-sm-12 pd-gap">
                         <div class="banner-item">
-                            <a href="#" class="banner__img">
+                            <a href="sanpham.html" class="banner__img">
                                 <img src="./assets/image/Banner-1.png" alt="">
                             </a>
                             <div class="banner__text text-1">
@@ -685,19 +703,19 @@
                                     <br>
                                     Watch Collection
                                 </p>
-                                <a href="#" class="banner__button button button-wg">Shop now</a>
+                                <a href="sanpham.html" class="banner__button button button-wg">Shop now</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-4 hide-sm pd-gap">
                         <div class="banner-item">
-                            <a href="#" class="banner__img">
+                            <a href="sanpham.html" class="banner__img">
                                 <img src="./assets/image/Banner-2.png" alt="">
                             </a>
                             <div class="banner__text text-2">
                                 <span class="banner__text-discount">Up to 40% discount</span>
                                 <p class="banner__text-title">Girls Watch Collection</p>
-                                <a href="#" class="banner__button button button-wg">Shop now</a>
+                                <a href="sanpham.html" class="banner__button button button-wg">Shop now</a>
                             </div>
                         </div>
                     </div>
@@ -705,14 +723,14 @@
                 <div class="banner__row row-2 flex cl-gap">
                     <div class="col-4 hide-sm pd-gap">
                         <div class="banner-item">
-                            <a href="#" class="banner__img">
+                            <a href="sanpham.html" class="banner__img">
                                 <img src="./assets/image/Banner-3.png" alt="">
                             </a>
                         </div>
                     </div>
                     <div class="col-8 col-sm-12 pd-gap">
                         <div class="banner-item">
-                            <a href="#" class="banner__img">
+                            <a href="sanpham.html" class="banner__img">
                                 <img src="./assets/image/Banner-4.png" alt="">
                             </a>
                             <div class="banner__text text-1">
@@ -722,7 +740,7 @@
                                     <br>
                                     Watch Collection
                                 </p>
-                                <a href="#" class="banner__button button button-wg">Shop now</a>
+                                <a href="sanpham.html" class="banner__button button button-wg">Shop now</a>
                             </div>
                         </div>
                     </div>
@@ -898,59 +916,43 @@
                 </div>
             </div>
         </section>
-        <!-- <section class="freeshipping">
-            <div class="container">
-                <div class="freeshipping__container flex">
-                    <div class="freeshipping__title pd-gap has-separate">
-                        <i class="fas fa-shipping-fast"></i>
-                        <span>Free Shipping</span>
-                    </div>
-                    <div class="freeshipping__desc pd-gap has-separate">
-                        <span>Free Delivery Now On Your First Order and over $200</span>
-                    </div>
-                    <div class="freeshipping__price pd-gap">
-                        <span>- Only $8.99*</span>
-                    </div>
-                </div>
-            </div>
-        </section> -->
         <section class="brand">
             <div class="brand__container container">
                 <div class="brand__slider">
                     <div class="swiper">
                         <div class="swiper-wrapper">
                             <div class="brand-item swiper-slide">
-                                <a href="#" class="brand__img">
+                                <a href="sanpham.html" class="brand__img">
                                     <img src="./assets/image/Brand-1.png" alt="">
                                 </a>
                             </div>
                             <div class="brand-item swiper-slide">
-                                <a href="#" class="brand__img">
+                                <a href="sanpham.html" class="brand__img">
                                     <img src="./assets/image/Brand-2.png" alt="">
                                 </a>
                             </div>
                             <div class="brand-item swiper-slide">
-                                <a href="#" class="brand__img">
+                                <a href="sanpham.html" class="brand__img">
                                     <img src="./assets/image/Brand-3.png" alt="">
                                 </a>
                             </div>
                             <div class="brand-item swiper-slide">
-                                <a href="#" class="brand__img">
+                                <a href="sanpham.html" class="brand__img">
                                     <img src="./assets/image/Brand-4.png" alt="">
                                 </a>
                             </div>
                             <div class="brand-item swiper-slide">
-                                <a href="#" class="brand__img">
+                                <a href="sanpham.html" class="brand__img">
                                     <img src="./assets/image/Brand-5.png" alt="">
                                 </a>
                             </div>
                             <div class="brand-item swiper-slide">
-                                <a href="#" class="brand__img">
+                                <a href="sanpham.html" class="brand__img">
                                     <img src="./assets/image/Brand-6.png" alt="">
                                 </a>
                             </div>
                             <div class="brand-item swiper-slide">
-                                <a href="#" class="brand__img">
+                                <a href="sanpham.html" class="brand__img">
                                     <img src="./assets/image/Brand-7.png" alt="">
                                 </a>
                             </div>
@@ -1135,7 +1137,7 @@
         <i class="fas fa-arrow-up"></i>
     </a>
 
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./assets/javascript/swiper-bundle.min.js"></script>
     <script src="./assets/javascript/main.js"></script>
 </body>
 </html>

@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sản Phẩm</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./assets/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./assets/css/home.css">
     <link rel="stylesheet" href="./assets/css/sanpham.css">
 </head>
@@ -206,15 +206,14 @@
             <i class="fas fa-times navbar__close"></i>
             <span>Menu</span>
         </div>
-        <div class="navbar__menu">
-            <a href="#" class="navber__menu-item">Home</a>
-            <a href="#" class="navber__menu-item">Men Watches</a>
-            <a href="#" class="navber__menu-item">Womem Watches</a>
-            <a href="#" class="navber__menu-item">Luxury Watches</a>
-            <a href="#" class="navber__menu-item">About Us</a>
-            <a href="#" class="navber__menu-item">Manager</a>
-            <a href="#" class="navber__menu-item">Sign In</a>
-        </div>
+        <ul class="navbar__menu">
+            <a href="index.html" class="navbar-item">Home</a>
+            <a href="#" class="navbar-item">Men Watches</a>
+            <a href="#" class="navbar-item">Womem Watches</a>
+            <a href="#" class="navbar-item">Sport Watches</a>
+            <a href="#" class="navbar-item">Luxury Watches</a>
+            <a href="#" class="navbar-item">About Us</a>
+        </ul>
     </div>
     <div id="overlay"></div>
     <header id="header">
@@ -223,7 +222,7 @@
                 <div class="navbar__open">
                     <i class="fas fa-bars"></i>
                 </div>
-                <a href="#" class="header__logo-box">
+                <a href="index.html" class="header__logo-box">
                     <img src="./assets/image/Logo.png" alt="Logo" class="header__logo">
                 </a>
                 <div class="header__search">
@@ -245,6 +244,9 @@
                             <p class="contact__title">Call Us:</p>
                             <p class="contact__text">91 89563 24789</p>
                         </div>
+                    </div>
+                    <div class="header__search__open">
+                        <i class="fas fa-search"></i>
                     </div>
                     <div class="header__cart">
                         <div class="cart__link">
@@ -317,7 +319,41 @@
                                 <span class="cart__ship-price">€879.65</span>
                             </div>
                             <div class="cart__view">
-                                <button class="button button-gb">View Cart</button>
+                                <a href="#" class="button button-gb">View Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__account">
+                        <div class="account__link">
+                            <i class="fas fa-user account__icon"></i>
+                        </div>
+                        <div class="account__dropdown">
+                            <div class="account__list">
+                                <p class="account__name">Phạm Duy Đạt</p>
+                                <a href="#" class="account-item">
+                                    <i class="fas fa-user-plus"></i>
+                                    Sign Up
+                                </a>
+                                <a href="#" class="account-item">
+                                    <i class="fas fa-sign-in-alt"></i>
+                                    Sign In
+                                </a>
+                                <a href="#" class="account-item">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    Sign Out
+                                </a>
+                                <a href="#" class="account-item">
+                                    <i class="fas fa-heart"></i>
+                                    Wishlist
+                                </a>
+                                <a href="#" class="account-item">
+                                    <i class="fas fa-cog"></i>
+                                    Setting
+                                </a>
+                                <a href="#" class="account-item">
+                                    <i class="fas fa-user-cog"></i>
+                                    Manager
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -328,39 +364,22 @@
             <div class="container header-bottom-container">
                 <ul class="header__menu">
                     <li class="menu__item">
-                        <a href="#" class="menu__link">Home</a>
+                        <a href="index.html" class="menu__link">Home</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#" class="menu__link">Men watches</a>
+                        <a href="sanpham.html" class="menu__link">Men watches</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#" class="menu__link">Women watches</a>
+                        <a href="sanpham.html" class="menu__link">Women watches</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#" class="menu__link">Luxury watches</a>
+                        <a href="sanpham.html" class="menu__link">Sport watches</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="sanpham.html" class="menu__link">Luxury watches</a>
                     </li>
                     <li class="menu__item">
                         <a href="#" class="menu__link">About us</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">Manager</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">Sign in</a>
-                        <ul class="submenu">
-                            <li class="submenu__item">
-                                <a href="#" class="submenu__link">
-                                    <i class="fas fa-cog"></i>
-                                    Settings
-                                </a>
-                            </li>
-                            <li class="submenu__item">
-                                <a href="#" class="submenu__link">
-                                    <i class="fas fa-sign-out-alt"></i>
-                                    Sign out
-                                </a>
-                            </li>
-                        </ul>
                     </li>
                 </ul>
             </div>
@@ -720,7 +739,7 @@
         <i class="fas fa-arrow-up"></i>
     </a>
 
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./assets/javascript/swiper-bundle.min.js"></script>
     <script src="./assets/javascript/main.js"></script>
     <script src="./assets/javascript/sanpham.js"></script>
 </body>

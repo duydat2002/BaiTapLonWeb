@@ -1,0 +1,106 @@
+.sign-form {
+    border-color: rgb(209, 208, 208);
+    border-style: solid;
+    border-width: 0.5px;
+    text-align: center;
+    padding: 20px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+
+.form-label {
+    font-size: 15px;
+    line-height: 26px;
+    width: 30%;
+    color: #262626;
+    font-weight: 400;
+    text-align: right;
+    display: block;
+    padding-right: 20px;
+}
+
+.form-input-box {
+    position: relative;
+    padding-right: 5px;
+    padding-left: 5px;
+    min-height: 1px;
+    width: 50%;
+    text-align: left;
+}
+
+.form-control{
+    width: 100%;
+    color: #262626;
+    font-size: 14px;
+    line-height: 36px;
+    border-color: rgb(156, 155, 155);
+    border-width: 1px;
+    border-style: solid;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.form-control-password {
+    padding-right: 40px;
+}
+
+.form-password-btn {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.form-password-btn:hover {
+    color: var(--green-color);
+}
+
+.form-social + label {
+    margin-right: 10px;
+}
+
+.sign-form > p {
+    font-size: 15px;
+}
+
+.form-link {
+    text-decoration: underline;
+}
+
+.form-link:hover {
+    color: var(--green-color);
+}
+
+.sign-btn {
+    margin-top: 5px;
+}
+
+.form-text {
+    color: #888;
+    font-size: 12px;
+    padding-bottom: 20px;
+    text-align: left;
+}
+
+.form-text-bottom {
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid rgb(238, 236, 236);;
+}
+
+@media screen and (max-width: 991px) {
+    .content {
+        flex-direction: column-reverse;
+    }
+
+    .column-left {
+        margin-top: 30px;
+    }
+}

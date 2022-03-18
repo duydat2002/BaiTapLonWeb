@@ -39,7 +39,7 @@ function renderProducts() {
         <div class="col-4 col-sm-6 col-xsm-12 pd-gap">
             <div class="product-item">
                 <div class="product__thumb-container">
-                    <a href="#" class="product__img">
+                    <a href="DetailProduct.html" class="product__img">
                         <img src="./assets/image/${product.alt}-1.png" alt="${product.alt}-1.png" class="img-main">
                         <img src="./assets/image/${product.alt}-2.png" alt="${product.alt}-2.png" class="img-secondary">
                     </a>
@@ -59,7 +59,7 @@ function renderProducts() {
                     <div class="product__rating">
                         ${renderStars(product.stars)}
                     </div>
-                    <a href="#" class="product__name">${product.name}</a>
+                    <a href="DetailProduct.html" class="product__name">${product.name}</a>
                     <div class="product__price-box">
                         <span class="product__price">€${parseFloat(product.price).toFixed(2)}</span>
                         <span class="product__price-sale">€${parseFloat(product.price*(100-product.discount)/100).toFixed(2)}</span> 
@@ -99,6 +99,10 @@ function renderProducts() {
 }
 renderProducts();
 
+const listQty = document.querySelector(".products__list-sort .list-qty");
+const listQtyValue = document.querySelectorAll(".products__list .product-item").length;
+listQty.innerHTML = listQtyValue;
+
 // SortControl
 function sortControl() {
     const sortContainer = document.querySelector(".sort-select");
@@ -131,6 +135,7 @@ function filterControl() {
     const filterNavOpen = document.querySelector(".search-filter__open");
     const filterNavClose = document.querySelector(".search-filter__close");
     const filterNav = document.querySelector(".search-filter");
+    const filterClearBtn = document.querySelector(".search-filter-clearall");
     const overlay = document.querySelector("#overlay");
     const html = document.querySelector("html");
     var arrayFilterActive = [];
@@ -218,6 +223,13 @@ function filterControl() {
         })
     }
 
+    filterClearBtn.addEventListener("click", () => {
+        arrayFilterActive = [];
+        
+        renderActiveFilter();
+        renderCheckedFilter();
+    })
+
     // Render Active Filter 
     function renderActiveFilter() {
         const htmls = arrayFilterActive.map((item) => {
@@ -229,6 +241,11 @@ function filterControl() {
             `;
         })
         activeFilterList.innerHTML = htmls.join(" ");
+
+        if (arrayFilterActive.length > 0) 
+            filterClearBtn.classList.add("active");
+        else
+            filterClearBtn.classList.remove("active");
 
         removeActiveFilter();
     }

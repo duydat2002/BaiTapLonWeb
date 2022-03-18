@@ -3,12 +3,14 @@ function scrollHeader() {
     const headerTop = document.querySelector(".header-top");
     const headerBottom = document.querySelector(".header-bottom");
     const cartDropdown = document.querySelector(".cart__dropdown");
+    const accountDropdown = document.querySelector(".account__dropdown");
 
     window.addEventListener("scroll", () => {
         if (window.innerWidth <= 991) {
             if (this.scrollY >= 85) {
                 headerTop.classList.add("active");
                 cartDropdown.classList.remove("active");
+                accountDropdown.classList.remove("active");
             }
             else 
                 headerTop.classList.remove("active");
@@ -16,6 +18,7 @@ function scrollHeader() {
             if (this.scrollY >= 160) {
                 headerBottom.classList.add("active");
                 cartDropdown.classList.remove("active");
+                accountDropdown.classList.remove("active");
             }
             else 
                 headerBottom.classList.remove("active");

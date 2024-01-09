@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Account</title>
     <link rel="stylesheet" href="./assets/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="./assets/css/home.css">
-    <link rel="stylesheet" href="./assets/css/account.css">
+    <link rel="stylesheet" href="./assets/css/home.css"/>
+    <link rel="stylesheet" href="./assets/css/account.css"/>
 </head>
 <body>
     <div id="navbar" class="navbar">
@@ -16,14 +16,14 @@
             <i class="fas fa-times navbar__close"></i>
             <span>Menu</span>
         </div>
-        <ul class="navbar__menu">
+        <div class="navbar__menu">
             <a href="index.html" class="navbar-item">Home</a>
             <a href="Products.html" class="navbar-item">Men Watches</a>
             <a href="Products.html" class="navbar-item">Womem Watches</a>
             <a href="Products.html" class="navbar-item">Sport Watches</a>
             <a href="Products.html" class="navbar-item">Luxury Watches</a>
-            <a href="#" class="navbar-item">About Us</a>
-        </ul>
+            <a href="AboutUs.html" class="navbar-item">About Us</a>
+        </div>
     </div>
     <div id="overlay"></div>
     <header id="header">
@@ -38,7 +38,7 @@
                 <div class="header__search">
                     <div class="header__search__container">
                         <form action="#" method="get">
-                            <input type="text" name="search" value="" placeholder="Search our catalog" autocomplete="off" class="search__input">
+                            <input type="text" name="search" placeholder="Search our catalog" autocomplete="off" class="search__input">
                             <button type="submit" class="search__btn">
                                 <i class="fas fa-search"></i>
                             </button>
@@ -65,12 +65,12 @@
                         </div>
                         <div class="cart__dropdown">
                             <div class="cart__scroll">
-                                <div class="cart__item flex">
-                                    <a href="#" class="cart-img">
+                                <!-- <div class="cart__item flex">
+                                    <a href="DetailProduct.html" class="cart-img">
                                         <img src="./assets/image/suunto-spartan-trainer-wrist-hr-black-techwear-1.png" alt="">
                                     </a>
                                     <div class="cart-info">
-                                        <a href="#"class="cart-name">Suunto Spartan Trainer Wrist HR Black</a>
+                                        <a href="DetailProduct.html"class="cart-name">Suunto Spartan Trainer Wrist HR Black</a>
                                         <p class="cart-price">€171.55</p>
                                         <p class="cart-qty">
                                             Quantity: 
@@ -82,11 +82,11 @@
                                     </div>
                                 </div>
                                 <div class="cart__item flex">
-                                    <a href="#" class="cart-img">
+                                    <a href="DetailProduct.html"  class="cart-img">
                                         <img src="./assets/image/suunto-9-peak-granite-blue-titanium-1.png" alt="">
                                     </a>
                                     <div class="cart-info">
-                                        <a href="#"class="cart-name">Suunto Spartan Trainer Wrist HR Black</a>
+                                        <a href="DetailProduct.html" class="cart-name">Suunto Spartan Trainer Wrist HR Black</a>
                                         <p class="cart-price">€477.30</p>
                                         <p class="cart-qty">
                                             Quantity: 
@@ -98,11 +98,11 @@
                                     </div>
                                 </div>
                                 <div class="cart__item flex">
-                                    <a href="#" class="cart-img">
+                                    <a href="DetailProduct.html"  class="cart-img">
                                         <img src="./assets/image/archetype-nemesis-automatic-1.png" alt="">
                                     </a>
                                     <div class="cart-info">
-                                        <a href="#"class="cart-name">Suunto Spartan Trainer Wrist HR Black</a>
+                                        <a href="DetailProduct.html" class="cart-name">Suunto Spartan Trainer Wrist HR Black</a>
                                         <p class="cart-price">€245.80</p>
                                         <p class="cart-qty">
                                             Quantity: 
@@ -112,11 +112,11 @@
                                     <div class="cart-remove">
                                         <i class="fas fa-times"></i>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="cart__sumary">
                                 <div class="cart__sumary-items">
-                                    <span>3 items</span>
+                                    <span class="cart__sumary-count">3 items</span>
                                     <span class="cart__items-price">€894.65</span>
                                 </div>
                                 <div class="cart__sumary-ship">
@@ -126,10 +126,10 @@
                             </div>
                             <div class="cart__total">
                                 <span>Total</span>
-                                <span class="cart__ship-price">€879.65</span>
+                                <span class="cart__total-price">€879.65</span>
                             </div>
                             <div class="cart__view">
-                                <a href="#" class="button button-gb">View Cart</a>
+                                <a href="Cart.html" class="button button-gb">View Cart</a>
                             </div>
                         </div>
                     </div>
@@ -140,11 +140,11 @@
                         <div class="account__dropdown">
                             <div class="account__list">
                                 <p class="account__name">Phạm Duy Đạt</p>
-                                <a href="#" class="account-item">
+                                <a href="SignUp.html" class="account-item">
                                     <i class="fas fa-user-plus"></i>
                                     Sign Up
                                 </a>
-                                <a href="#" class="account-item">
+                                <a href="SignIn.html" class="account-item">
                                     <i class="fas fa-sign-in-alt"></i>
                                     Sign In
                                 </a>
@@ -160,7 +160,7 @@
                                     <i class="fas fa-cog"></i>
                                     Setting
                                 </a>
-                                <a href="#" class="account-item">
+                                <a href="manager.html" class="account-item">
                                     <i class="fas fa-user-cog"></i>
                                     Manager
                                 </a>
@@ -189,25 +189,33 @@
                         <a href="Products.html" class="menu__link">Luxury watches</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#" class="menu__link">About us</a>
+                        <a href="AboutUs.html" class="menu__link">About us</a>
                     </li>
                 </ul>
             </div>
         </div>
     </header>
     <main id="main">
-        <section class="wrapper">
+        <section class="wrapper" id="account">
             <div class="container">
                 <div class="content flex cl-gap">
                     <div class="col-3 col-md-12 pd-gap">
                         <div class="column-left">
                             <div class="block-categories">
-                                <h2 class="categories__title section-title" >Categories</h2>
+                                <h2 class="categories__title section-title" >Account</h2>
                                 <div class="categories__list">
-                                    <a href="Products.html" class="categories-item">Men Watches</a>
-                                    <a href="Products.html" class="categories-item">Women Watches</a>
-                                    <a href="Products.html" class="categories-item">Sport Watches</a> 
-                                    <a href="Products.html" class="categories-item">Luxury Watches</a> 
+                                    <div class="categories-item active" id="profileTitle">
+                                        <i class="fas fa-id-card categories-icon"></i>
+                                        My Profile
+                                    </div>
+                                    <div class="categories-item" id="addressTitle">
+                                        <i class="fas fa-map-marked-alt categories-icon"></i>
+                                        My Address
+                                    </div>
+                                    <div class="categories-item" id="change-passwordTitle">
+                                        <i class="fas fa-key categories-icon"></i>
+                                        Change Password
+                                    </div>
                                 </div>
                             </div>
                             <a href="Products.html" class="left-banner hide-md">
@@ -217,92 +225,201 @@
                     </div>
                     <div class="col-9 col-md-12 pd-gap">
                         <div class="column-right">
-                            <div class="signup__container">
-                                <h2 class="section-title">Create An Account</h2>
-                                <form action="#" method="post" class="sign-form" onsubmit="return validateSignUp()">
-                                    <div class="form-group">
-                                        <div class="flex ai-center">
-                                            <label class="form-label required-input">First name</label>
-                                            <div class="form-input-box">
-                                                <input class="form-control" name="firstname" id="firstname"  type="text">
+                            <form action="#" method="post" class="form-account">
+                                <div class="tab-container">
+                                    <div class="tab-item profile__container active" id="profile">
+                                        <h2 class="section-title">My Profile</h2>
+                                        <div class="form-container">
+                                            <div id="error_box">
+                                                <span class="error-server">This abcdef</span>
+                                            </div>
+                                            <div class="sign-form">
+                                                <div class="form-group">
+                                                    <div class="flex ai-center">
+                                                        <label class="form-label">First name</label>
+                                                        <div class="form-input-box">
+                                                            <input class="form-control" name="firstname" id="firstname"  type="text">
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex">
+                                                        <div class="form-label"></div>
+                                                        <span class="form-error" id="firstname_error"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="flex ai-center">
+                                                        <label class="form-label">Last name</label>
+                                                        <div class="form-input-box">
+                                                            <input class="form-control" name="lastname" id="lastname" type="text">
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex">
+                                                        <div class="form-label"></div>
+                                                        <span class="form-error" id="lastname_error"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="flex ai-center">
+                                                        <label class="form-label">Email</label>
+                                                        <div class="form-input-box">
+                                                            <input class="form-control" name="email" id="email" type="text">
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex">
+                                                        <div class="form-label"></div>
+                                                        <span class="form-error" id="email_error"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="flex ai-center">
+                                                        <label class="form-label">Birthdate</label>
+                                                        <div class="form-input-box">
+                                                            <input class="form-control" name="birthdate" type="date" id="birthdate">
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex">
+                                                        <div class="form-label"></div>
+                                                        <span class="form-error" id="birthdate_error"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group social-group">
+                                                    <div class="flex ai-center">
+                                                        <label class="form-label">Social title</label>
+                                                        <div class="form-input-box">
+                                                            <input class="form-social" name="social" 
+                                                            id="social-male" type="radio" value="male">
+                                                            <label for="social-male"> Mr</label>
+                                                            <input class="form-social" name="social" 
+                                                            id="social-female" type="radio" value="female">
+                                                            <label for="social-female"> Mrs</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button type="submit" name="signup" value="signup" class="button button-gb sign-btn" formaction="#?tab='profile'" onclick="return validateProfile()">Save</button>
+                                                <p class="form-text-bottom">Have a good day <3</p>
                                             </div>
                                         </div>
-                                        <div class="flex">
-                                            <div class="form-label"></div>
-                                            <span class="form-error" id="firstname_error"></span>
-                                        </div>
                                     </div>
-                                    <div class="form-group">
-                                        <div class="flex ai-center">
-                                            <label class="form-label">Last name</label>
-                                            <div class="form-input-box">
-                                                <input class="form-control" name="lastname" id="lastname" type="text">
+                                    <div class="tab-item address__container" id="address">
+                                        <h2 class="section-title">My Address</h2>
+                                        <div class="sign-form">
+                                            <input class="form-control" name="ordernumber" type="text" style="display: none;">
+                                            <div class="form-group">
+                                                <div class="flex ai-center">
+                                                    <label class="form-label">Phone Number</label>
+                                                    <div class="form-input-box">
+                                                        <input class="form-control" name="phonenumber" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="flex">
+                                                    <div class="form-label"></div>
+                                                    <span class="form-error" id="phonenumber_error"></span>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="flex">
-                                            <div class="form-label"></div>
-                                            <span class="form-error" id="lastname_error"></span>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="flex ai-center">
-                                            <label class="form-label">Email</label>
-                                            <div class="form-input-box">
-                                                <input class="form-control" name="email" id="email" type="text">
+                                            <div class="form-group">
+                                                <div class="flex ai-center">
+                                                    <label class="form-label">Address</label>
+                                                    <div class="form-input-box">
+                                                        <input class="form-control" name="address"  type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="flex">
+                                                    <div class="form-label"></div>
+                                                    <span class="form-error" id="address_error"></span>
+                                                </div>
                                             </div>
+                                            <button type="submit" name="signup" value="signup" class="button button-gb sign-btn" formaction="#?tab='address'">Save</button>
+                                            <button type="submit" name="signup" value="signup" class="button button-gb sign-btn" formaction="#?tab='profile'">Edit</button>
                                         </div>
-                                        <div class="flex">
-                                            <div class="form-label"></div>
-                                            <span class="form-error" id="email_error"></span>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="flex ai-center">
-                                            <label class="form-label">Password</label>
-                                            <div class="form-input-box">
-                                                <div class="form-input-password">
-                                                    <input class="form-control form-control-password" name="password"  type="password" id="password" autocomplete="new-password">
-                                                    <span class="form-password-btn">
-                                                        <i class="fas fa-eye"></i>
-                                                    </span>
+                                        <div class="address-list__container">
+                                            <h2 class="section-title">Address List</h2>
+                                            <div class="address-list">
+                                                <div class="address-item flex ai-center">
+                                                    <div class="col-9">
+                                                        <div class="address__content">
+                                                            <div class="address-row flex">
+                                                                <span class="address__label pd-gap">Phone number</span>
+                                                                <span class="address__desc pd-gap">0333140642</span>
+                                                            </div>
+                                                            <div class="address-row flex">
+                                                                <span class="address__label pd-gap">Address</span>
+                                                                <span class="address__desc pd-gap">Bac Quang/ Ha Giang/ Viet Nam</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="address__btns">
+                                                            <div class="address-row">
+                                                                <a href="ProductManagement.html?name=abcd" class="address-edit">Edit</a>
+                                                                <button type="submit" name="delete" value="1" class="address-delete" formnovalidate>Delete</button>
+                                                            </div>
+                                                            <button class="address-setdefault button button-gb active" name="default" formnovalidate>Set as default</button>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="flex">
-                                            <div class="form-label"></div>
-                                            <span class="form-error" id="password_error"></span>
-                                        </div>
                                     </div>
-                                    <div class="form-group">
-                                        <div class="flex ai-center">
-                                            <label class="form-label">Birthdate</label>
-                                            <div class="form-input-box">
-                                                <input class="form-control" name="birthdate" type="date" id="birthdate">
+                                    <div class="tab-item  change-password__container" id="change-password">
+                                        <h2 class="section-title">Change Password</h2>
+                                        <div class="sign-form">
+                                            <div class="form-group">
+                                                <div class="flex ai-center">
+                                                    <label class="form-label">Current Password</label>
+                                                    <div class="form-input-box">
+                                                        <div class="form-input-password">
+                                                            <input class="form-control form-control-password" name="password" type="password">
+                                                            <span class="form-password-btn">
+                                                                <i class="fas fa-eye"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex">
+                                                    <div class="form-label"></div>
+                                                    <span class="form-error" id="current_password_error"></span>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="flex">
-                                            <div class="form-label"></div>
-                                            <span class="form-error" id="birthdate_error"></span>
-                                        </div>
-                                    </div>
-                                    <div class="form-group social-group">
-                                        <div class="flex ai-center">
-                                            <label class="form-label">Social title</label>
-                                            <div class="form-input-box">
-                                                <input class="form-social" name="social" 
-                                                id="social-male" type="radio" value="male" checked>
-                                                <label for="social-male"> Mr</label>
-                                                <input class="form-social" name="social" 
-                                                id="social-female" type="radio" value="female">
-                                                <label for="social-female"> Mrs</label>
+                                            <div class="form-group">
+                                                <div class="flex ai-center">
+                                                    <label class="form-label">New Password</label>
+                                                    <div class="form-input-box">
+                                                        <div class="form-input-password">
+                                                            <input class="form-control form-control-password" name="newpassword" type="password">
+                                                            <span class="form-password-btn">
+                                                                <i class="fas fa-eye"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex">
+                                                    <div class="form-label"></div>
+                                                    <span class="form-error" id="newpassword_error"></span>
+                                                </div>
                                             </div>
+                                            <div class="form-group">
+                                                <div class="flex ai-center">
+                                                    <label class="form-label">New Password Comfirmation</label>
+                                                    <div class="form-input-box">
+                                                        <div class="form-input-password">
+                                                            <input class="form-control form-control-password" name="re_newpassword"  type="password">
+                                                            <span class="form-password-btn">
+                                                                <i class="fas fa-eye"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex">
+                                                    <div class="form-label"></div>
+                                                    <span class="form-error" id="re_newpassword_error"></span>
+                                                </div>
+                                            </div>
+                                            <button type="submit" name="signup" value="signup" class="button button-gb sign-btn" formaction="#?tab='change-password'">Save</button>
+                                            <p class="form-text-bottom">Have a good day <3</p>
                                         </div>
                                     </div>
-                                    <p class="form-text-top">Already have an account? <a href="SignIn.html" class="form-link">Log in instead!</a></p>
-                                    <button type="submit" name="signup" value="signup" class="button button-gb sign-btn">Save</button>
-                                    <p class="form-text-bottom">Have a good day <3</p>
-                                </form>
-                            </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -357,7 +474,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="footer__link">
+                                    <a href="Products.html" class="footer__link">
                                         <i class="fas fa-angle-right"></i>
                                         <span>New product</span>
                                     </a>
@@ -409,7 +526,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="footer__link">
+                                    <a href="AboutUs.html" class="footer__link">
                                         <i class="fas fa-angle-right"></i>
                                         <span>About us</span>
                                     </a>
@@ -483,5 +600,6 @@
     <script src="./assets/javascript/swiper-bundle.min.js"></script>
     <script src="./assets/javascript/main.js"></script>
     <script src="./assets/javascript/account.js"></script>
+    <script src="./assets/javascript/test.js"></script>
 </body>
 </html>

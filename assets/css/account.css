@@ -1,4 +1,4 @@
-.sign-form {
+.form-container {
     border-color: rgb(209, 208, 208);
     border-style: solid;
     border-width: 0.5px;
@@ -7,16 +7,13 @@
 }
 
 .form-group {
-    display: flex;
-    align-items: center;
     text-align: center;
     margin-bottom: 1rem;
+    align-items: center;
 }
 
-
 .form-label {
-    font-size: 15px;
-    line-height: 26px;
+    font-size: 14px;
     width: 30%;
     color: #262626;
     font-weight: 400;
@@ -25,13 +22,19 @@
     padding-right: 20px;
 }
 
+.form-error {
+    display: block;
+    color: rgb(218, 63, 63);
+    margin-top: 5px;
+}
+
 .form-input-box {
-    position: relative;
-    padding-right: 5px;
-    padding-left: 5px;
-    min-height: 1px;
     width: 50%;
     text-align: left;
+}
+
+.form-input-password {
+    position: relative;
 }
 
 .form-control{
@@ -66,6 +69,14 @@
     margin-right: 10px;
 }
 
+.social-group .form-label{
+    padding-top: 0;
+}
+
+.social-group .form-input-box{
+    padding-top: 5px;
+}
+
 .sign-form > p {
     font-size: 15px;
 }
@@ -95,6 +106,91 @@
     border-top: 1px solid rgb(238, 236, 236);;
 }
 
+.categories__list .categories-item.active {
+    color: var(--green-color);
+}
+
+.tab-container > .tab-item {
+    display: none;
+}
+
+.tab-container > .tab-item.active {
+    display: block;
+}
+
+.address-list__container {
+    border-radius: 10px;
+    box-shadow: 3px 7px 15px rgb(0 0 0 / 30%);
+    padding: 30px;
+    margin-top: 50px;
+}
+
+.address-item {
+    border-top: 1px solid #ededed;
+    padding: 30px 0;
+}
+
+.address-row {
+    margin-bottom: 10px;
+}
+
+.address__content {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.address__label {
+    width: 30%;
+    text-align: right;
+}
+
+.address__desc {
+    flex: 1 1 0;
+}
+
+.address__btns {
+    text-align: right;
+}
+
+.address-edit,
+.address-delete {
+    background: transparent;
+    text-decoration: underline;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.address-edit:hover,
+.address-delete:hover {
+    color: var(--green-color);
+}
+
+.address-setdefault {
+    padding: 5px 20px;
+    border-radius: 0;
+}
+
+.address-setdefault.active {
+    background: #000;
+    color: #fff;
+    cursor: not-allowed;
+} 
+
+#address .sign-btn {
+    margin: 0 10px;
+}
+
+.error-server {
+    display: block;
+    width: 100%;
+    background: #f2dede;
+    color: #a94442;
+    border: 1px solid #ebcccc;
+    text-align: left;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
 @media screen and (max-width: 991px) {
     .content {
         flex-direction: column-reverse;
@@ -102,5 +198,23 @@
 
     .column-left {
         margin-top: 30px;
+    }
+
+    #account .content {
+        flex-direction: column;
+    }
+
+    #account .column-left {
+        margin-top: 0;
+    }
+
+    #account .column-right {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .form-label {
+        font-size: 14px;
     }
 }

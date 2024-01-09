@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Product Management</title>
     <link rel="stylesheet" href="./assets/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./assets/css/home.css">
-    <link rel="stylesheet" href="./assets/css/account.css">
+    <link rel="stylesheet" href="./assets/css/manage.css">
 </head>
 <body>
     <div id="navbar" class="navbar">
@@ -140,11 +140,11 @@
                         <div class="account__dropdown">
                             <div class="account__list">
                                 <p class="account__name">Phạm Duy Đạt</p>
-                                <a href="#" class="account-item">
+                                <a href="SignUp.html" class="account-item">
                                     <i class="fas fa-user-plus"></i>
                                     Sign Up
                                 </a>
-                                <a href="#" class="account-item">
+                                <a href="SignIn.html" class="account-item">
                                     <i class="fas fa-sign-in-alt"></i>
                                     Sign In
                                 </a>
@@ -161,8 +161,12 @@
                                     Setting
                                 </a>
                                 <a href="#" class="account-item">
-                                    <i class="fas fa-user-cog"></i>
-                                    Manager
+                                    <i class="fas fa-box"></i>
+                                    Product Management
+                                </a>
+                                <a href="#" class="account-item">
+                                    <i class="fas fa-users"></i>
+                                    Account Management
                                 </a>
                             </div>
                         </div>
@@ -196,118 +200,208 @@
         </div>
     </header>
     <main id="main">
-        <section class="wrapper">
-            <div class="container">
-                <div class="content flex cl-gap">
-                    <div class="col-3 col-md-12 pd-gap">
-                        <div class="column-left">
-                            <div class="block-categories">
-                                <h2 class="categories__title section-title" >Categories</h2>
-                                <div class="categories__list">
-                                    <a href="Products.html" class="categories-item">Men Watches</a>
-                                    <a href="Products.html" class="categories-item">Women Watches</a>
-                                    <a href="Products.html" class="categories-item">Sport Watches</a> 
-                                    <a href="Products.html" class="categories-item">Luxury Watches</a> 
+        <form method="post" >
+            <div class="alertbox alertbox-delete">
+                <div class="alertbox-close">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="alertbox__icon">
+                    <i class="fas fa-times"></i>
+                </div>
+                <p class="alertbox__title">Are you sure?</p>
+                <p class="alertbox__desc">
+                    Do you really want to delete this product?
+                    <br/>
+                    This process cannot be undone.
+                </p>
+                <button type="button" class="alertbox__button button-cancel">Cancel</button>
+                <button type="submit" class="alertbox__button button-delete">Delete</button>
+            </div>
+            <section class="product-info wrapper">
+                <div class="container">
+                    <div class="product-info__container">
+                        <h2 class="section-title">Product Information</h2>
+                        <input type="text" name="id" id="id" style="display: none;" readonly>
+                        <div class="form-group">
+                            <label class="form-label">Name</label>
+                            <div class="form-input-box">
+                                <input type="text" name="name" id="name" class="form-control">
+                                <span class="form-error" id="name_error"></span>
+                            </div>
+                        </div>
+                        <div class="form-group flex cl-gap">
+                            <div class="col-2 col-md-4 col-sm-6 col-xsm-12 pd-gap">
+                                <label class="form-label">Price</label>
+                                <div class="form-input-box">
+                                    <input type="text" name="price" id="price"  class="form-control">
+                                    <span class="form-error" id="price_error"></span>
                                 </div>
                             </div>
-                            <a href="Products.html" class="left-banner hide-md">
-                                <img src="./assets/image/left-banner-1.png" alt="">
-                            </a>
+                            <div class="col-2 col-md-4 col-sm-6 col-xsm-12 pd-gap">
+                                <label class="form-label">Discount</label>
+                                <div class="form-input-box">
+                                    <input type="text" name="discount" id="discount"  class="form-control">
+                                    <span class="form-error" id="discount_error"></span>
+                                </div>
+                            </div>
+                            <div class="col-2 col-md-4 col-sm-6 col-xsm-12 pd-gap">
+                                <label class="form-label">Size</label>
+                                <div class="form-input-box">
+                                    <input type="text" name="size" id="size"  class="form-control">
+                                    <span class="form-error" id="size_error"></span>
+                                </div>
+                            </div>
+                            <div class="col-2 col-md-4 col-sm-6 col-xsm-12 pd-gap">
+                                <label class="form-label">Color</label>
+                                <div class="select-box select-radio select-color">
+                                    <div class="select-box-title">
+                                        <div class="select-box-value">
+                                        </div>
+                                        <i class="fas fa-caret-down"></i>
+                                    </div>
+                                    <div class="select-box-list">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2 col-md-4 col-sm-6 col-xsm-12 pd-gap">
+                                <label class="form-label">Stars</label>
+                                <div class="select-box select-radio select-stars">
+                                    <div class="select-box-title">
+                                        <div class="select-box-value">
+                                        </div>
+                                        <i class="fas fa-caret-down"></i>
+                                    </div>
+                                    <div class="select-box-list">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2 col-md-4 col-sm-6 col-xsm-12 pd-gap">
+                                <label class="form-label">Type</label>
+                                <div class="select-box select-checkbox select-type">
+                                    <div class="select-box-title">
+                                        <input type="text" name="type" id="type" class="type-input" readonly>
+                                        <i class="fas fa-caret-down"></i>
+                                    </div>
+                                    <div class="select-box-list">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Description</label>
+                            <div class="form-input-box">
+                                <textarea name="desc" id="desc" rows="3" class="form-control"></textarea>
+                                <span class="form-error" id="desc_error"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Images</label>
+                            <div class="form-input-box flex upload-box">
+                                <input type="file" name="imgs" id="imgs" multiple accept=".jpg, .png, .jpeg">
+                                <div class="form-btns">
+                                    <input type="submit" id="edit" name="edit" value="Edit">
+                                    <input type="submit" id="save" name="save" value="Save" onclick="return validateProduct()">
+                                </div>
+                            </div>
+                            <span class="form-error" id="imgs_error"></span>
+                        </div>
+                        <input type="text" id="alts" name="alts" value="" readonly>
+                        <div class="imgs-show flex cl-gap">
                         </div>
                     </div>
-                    <div class="col-9 col-md-12 pd-gap">
-                        <div class="column-right">
-                            <div class="signup__container">
-                                <h2 class="section-title">Create An Account</h2>
-                                <form action="#" method="post" class="sign-form" onsubmit="return validateSignUp()">
-                                    <div class="form-group">
-                                        <div class="flex ai-center">
-                                            <label class="form-label required-input">First name</label>
-                                            <div class="form-input-box">
-                                                <input class="form-control" name="firstname" id="firstname"  type="text">
-                                            </div>
+                </div>
+            </section>
+            <section class="product-list-wrapper wrapper">
+                <div class="container">
+                    <div class="product-list__container">
+                        <h2 class="section-title">Product List</h2>
+                        <div class="product-list" id="product_list">
+                            <div class="product-item flex cl-gap">
+                                <div class="col-2 col-md-4 col-sm-12 pd-gap">
+                                    <div class="product__img">
+                                        <img src="./assets/image/archetype-nemesis-automatic-1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-8 col-sm-12 pd-gap">
+                                    <div class="product__detail">
+                                        <h1 class="product__name">Suunto 9 Baro &amp; Peak</h1>
+                                        <div class="product__rating">
+                                            <i class="star-full fas fa-star"></i>
+                                            <i class="star-full fas fa-star"></i>
+                                            <i class="star-full fas fa-star"></i>
+                                            <i class="star-full fas fa-star"></i>
+                                            <i class="star-full fas fa-star"></i>
                                         </div>
-                                        <div class="flex">
-                                            <div class="form-label"></div>
-                                            <span class="form-error" id="firstname_error"></span>
+                                        <div class="product__price-box">
+                                            <span class="product__price">€530.34</span>
+                                            <span class="product__price-sale">€477.30</span>
+                                            <span class="product__discount">Save 10%</span>
+                                        </div>
+                                        <p class="product__desc">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                                        <div class="product__size">
+                                            <span class="action__title">Size</span>
+                                            <span class="action__item size-item">43mm</span>
+                                        </div>
+                                        <div class="product__color">
+                                            <span class="action__title">Color</span>
+                                            <div class="action__item color-item" data-value="Blue"></div>
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <div class="flex ai-center">
-                                            <label class="form-label">Last name</label>
-                                            <div class="form-input-box">
-                                                <input class="form-control" name="lastname" id="lastname" type="text">
-                                            </div>
+                                </div>
+                                <div class="col-2 col-md-4 col-sm-12 pd-gap">
+                                    <div class="product__action">
+                                        <a href="ProductManagement.html?name=abcd" class="product-edit">Edit</a>
+                                        <div data-id="1" class="product-delete">Delete</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item flex cl-gap">
+                                <div class="col-2 col-md-4 col-sm-12 pd-gap">
+                                    <div class="product__img">
+                                        <img src="./assets/image/archetype-nemesis-automatic-1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-8 col-sm-12 pd-gap">
+                                    <div class="product__detail">
+                                        <h1 class="product__name">Suunto 9 Baro &amp; Peak</h1>
+                                        <div class="product__rating">
+                                            <i class="star-full fas fa-star"></i>
+                                            <i class="star-full fas fa-star"></i>
+                                            <i class="star-full fas fa-star"></i>
+                                            <i class="star-full fas fa-star"></i>
+                                            <i class="star-full fas fa-star"></i>
                                         </div>
-                                        <div class="flex">
-                                            <div class="form-label"></div>
-                                            <span class="form-error" id="lastname_error"></span>
+                                        <div class="product__price-box">
+                                            <span class="product__price">€530.34</span>
+                                            <span class="product__price-sale">€477.30</span>
+                                            <span class="product__discount">Save 10%</span>
+                                        </div>
+                                        <p class="product__desc">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                                        <div class="product__size">
+                                            <span class="action__title">Size</span>
+                                            <span class="action__item size-item">43mm</span>
+                                        </div>
+                                        <div class="product__color">
+                                            <span class="action__title">Color</span>
+                                            <div class="action__item color-item" data-value="Blue"></div>
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <div class="flex ai-center">
-                                            <label class="form-label">Email</label>
-                                            <div class="form-input-box">
-                                                <input class="form-control" name="email" id="email" type="text">
-                                            </div>
-                                        </div>
-                                        <div class="flex">
-                                            <div class="form-label"></div>
-                                            <span class="form-error" id="email_error"></span>
-                                        </div>
+                                </div>
+                                <div class="col-2 col-md-4 col-sm-12 pd-gap">
+                                    <div class="product__action">
+                                        <a href="ProductManagement.html?name=abcd" class="product-edit">Edit</a>
+                                        <button type="submit" name="delete" value="1" class="product-delete">Delete</button>
                                     </div>
-                                    <div class="form-group">
-                                        <div class="flex ai-center">
-                                            <label class="form-label">Password</label>
-                                            <div class="form-input-box">
-                                                <div class="form-input-password">
-                                                    <input class="form-control form-control-password" name="password"  type="password" id="password" autocomplete="new-password">
-                                                    <span class="form-password-btn">
-                                                        <i class="fas fa-eye"></i>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex">
-                                            <div class="form-label"></div>
-                                            <span class="form-error" id="password_error"></span>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="flex ai-center">
-                                            <label class="form-label">Birthdate</label>
-                                            <div class="form-input-box">
-                                                <input class="form-control" name="birthdate" type="date" id="birthdate">
-                                            </div>
-                                        </div>
-                                        <div class="flex">
-                                            <div class="form-label"></div>
-                                            <span class="form-error" id="birthdate_error"></span>
-                                        </div>
-                                    </div>
-                                    <div class="form-group social-group">
-                                        <div class="flex ai-center">
-                                            <label class="form-label">Social title</label>
-                                            <div class="form-input-box">
-                                                <input class="form-social" name="social" 
-                                                id="social-male" type="radio" value="male" checked>
-                                                <label for="social-male"> Mr</label>
-                                                <input class="form-social" name="social" 
-                                                id="social-female" type="radio" value="female">
-                                                <label for="social-female"> Mrs</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p class="form-text-top">Already have an account? <a href="SignIn.html" class="form-link">Log in instead!</a></p>
-                                    <button type="submit" name="signup" value="signup" class="button button-gb sign-btn">Save</button>
-                                    <p class="form-text-bottom">Have a good day <3</p>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </form>
     </main>
     <footer id="footer">
         <div class="container">
@@ -482,6 +576,6 @@
 
     <script src="./assets/javascript/swiper-bundle.min.js"></script>
     <script src="./assets/javascript/main.js"></script>
-    <script src="./assets/javascript/account.js"></script>
+    <script src="./assets/javascript/productManagement.js"></script>
 </body>
 </html>

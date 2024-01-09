@@ -10,196 +10,6 @@
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css"/>
 </head>
 <body>
-    <div id="modal">
-        <div id="wishlist-modal" class="wishlist-modal modal">
-            <div class="modal__close wishlist-modal-close">
-                <i class="fas fa-times"></i>
-            </div>
-            <p class="wishlist-modal__text">The product was successfully added to your wishlist.</p>
-        </div>
-        <div id="quickview-modal" class="quickview-modal modal">
-            <div class="quickview-modal__container flex cl-gap">        
-                <div class="modal__close">
-                    <i class="fas fa-times"></i>
-                </div>
-                <div class="col-6 col-sm-12 pd-gap">
-                    <div class="quickview__slider-container">
-                        <div class="quickview__mainimg">
-                            <img src="./assets/image/suunto-9-peak-granite-blue-titanium-1.png" alt="">
-                        </div>
-                        <div class="quickview__slider">
-                            <div class="swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="quickview-item active swiper-slide">
-                                        <div class="quickview__img">
-                                            <img src="./assets/image/suunto-9-peak-granite-blue-titanium-1.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="quickview-item swiper-slide">
-                                        <div class="quickview__img">
-                                            <img src="./assets/image/suunto-9-peak-granite-blue-titanium-2.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="quickview-item swiper-slide">
-                                        <div class="quickview__img">
-                                            <img src="./assets/image/suunto-9-peak-granite-blue-titanium-3.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="quickview-item swiper-slide">
-                                        <div class="quickview__img">
-                                            <img src="./assets/image/suunto-9-peak-granite-blue-titanium-4.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="quickview-item swiper-slide">
-                                        <div class="quickview__img">
-                                            <img src="./assets/image/suunto-9-peak-granite-blue-titanium-5.png" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="quickview-item swiper-slide">
-                                        <div class="quickview__img">
-                                            <img src="./assets/image/suunto-9-peak-granite-blue-titanium-6.png" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="quickview__navigation">
-                                <i class="fas fa-long-arrow-alt-left swiper-prev"></i>
-                                <i class="fas fa-long-arrow-alt-right swiper-next"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-12 pd-gap">
-                    <div class="quickview__detail">
-                        <h1 class="quickview__name">Suunto 9 Baro & Peak</h1>
-                        <div class="quickview__price-box">
-                            <span class="quickview__price">€530.34</span>
-                            <span class="quickview__price-sale">€477.30</span>
-                            <span class="quickview__discount">Save 10%</span>
-                        </div>
-                        <p class="quickview__desc">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-                        <form action="#" method="get" class="quickview__action">
-                            <div class="quickview__size">
-                                <span class="size__title action__title">Size</span>
-                                <div class="size__list action__list flex">
-                                    <div class="size-item action__item active">
-                                        <input type="radio" name="size" value="43mm" checked class="action__input">
-                                        43mm
-                                    </div>
-                                    <div class="size-item action__item">
-                                        <input type="radio" name="size" value="50mm" class="action__input">
-                                        50mm
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="quickview__color">
-                                <span class="color__title action__title">Color</span>
-                                <div class="color__list action__list flex">
-                                    <div class="color-item action__item active">
-                                        <input type="radio" name="color" value="white" checked class="action__input">
-                                    </div>
-                                    <div class="color-item action__item">
-                                        <input type="radio" name="color" value="red" class="action__input">
-                                    </div>
-                                    <div class="color-item action__item">
-                                        <input type="radio" name="color" value="black" class="action__input">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="quickview__quantity">
-                                <div class="quantity">
-                                    <input type="text" name="qty" value="1" class="quantity__input">
-                                    <div class="quantity__btns">
-                                        <i class="fas fa-angle-up quantity-up"></i>
-                                        <i class="fas fa-angle-down quantity-down"></i>
-                                    </div>
-                                </div>
-                                <button type="submit" class="button button-gb addCart">Add To Cart</button>
-                            </div>
-                        </form>
-                        <div class="quickview__social">
-                            <a href="#" class="social-item facebook-icon">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="social-item twitter-icon">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="social-item google-icon">
-                                <i class="fab fa-google-plus-g"></i>
-                            </a>
-                            <a href="#" class="social-item instagram-icon">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="blockcart-modal" class="blockcart-modal modal">
-            <div class="blockcart__container">
-                <div class="modal__close">
-                    <i class="fas fa-times"></i>
-                </div>
-                <h3 class="blockcart__title">
-                    <i class="fas fa-check"></i>
-                    Product successfully added to your shopping cart
-                </h3>
-                <div class="blockcart__body flex cl-gap">
-                    <div class="col-6 col-xsm-12 pd-gap">
-                        <div class="blockcart__body-left flex">
-                            <div class="col-6 col-sm-12 pd-gap">
-                                <div class="blockcart__img">
-                                    <img src="./assets/image/suunto-9-peak-granite-blue-titanium-1.png" alt="">
-                                </div>
-                            </div>
-                            <div class="col-6 col-sm-12 pd-gap">
-                                <div class="blockcart__info">
-                                    <h3 class="blockcart__name">Suunto 9 Baro & Peak</h3>
-                                    <div class="blockcart__price-box">
-                                        <span class="blockcart__price">€530.34</span>
-                                        <span class="blockcart__price-sale">€477.30</span>
-                                    </div>
-                                    <p class="blockcart__label blockcart__size">
-                                        Size:
-                                        <span>43mm</span>
-                                    </p>
-                                    <p class="blockcart__label blockcart__color">
-                                        Color:
-                                        <span>Black</span>
-                                    </p>
-                                    <p class="blockcart__label blockcart__qty">
-                                        Quantitu:
-                                        <span>1</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-xsm-12 pd-gap">
-                        <div class="blockcart__body-right">
-                            <p class="blockcart__count">There are <span>3</span> items in your cart.</p>
-                            <p class="blockcart__subtotal">
-                                Subtotal:
-                                <span>€485.00</span>
-                            </p>
-                            <p class="blockcart__shipping">
-                                shipping:
-                                <span>Free</span>
-                            </p>
-                            <p class="blockcart__total">
-                                Total:
-                                <span>€485.00</span>
-                            </p>    
-                            <div class="blockcart__btns">
-                                <button class="button button-gb blockcart__continueBtn">Continue Shopping</button>
-                                <a href="Cart.html" class="button button-bg blockcart__checkoutBtn">Proceed to checkout</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div id="navbar" class="navbar">
         <div class="navbar__title">
             <i class="fas fa-times navbar__close"></i>
@@ -227,7 +37,7 @@
                 <div class="header__search">
                     <div class="header__search__container">
                         <form action="#" method="get">
-                            <input type="text" name="search" value="" placeholder="Search our catalog" autocomplete="off" class="search__input">
+                            <input type="text" name="search" placeholder="Search our catalog" autocomplete="off" class="search__input">
                             <button type="submit" class="search__btn">
                                 <i class="fas fa-search"></i>
                             </button>
@@ -254,7 +64,7 @@
                         </div>
                         <div class="cart__dropdown">
                             <div class="cart__scroll">
-                                <div class="cart__item flex">
+                                <!-- <div class="cart__item flex">
                                     <a href="DetailProduct.html" class="cart-img">
                                         <img src="./assets/image/suunto-spartan-trainer-wrist-hr-black-techwear-1.png" alt="">
                                     </a>
@@ -301,11 +111,11 @@
                                     <div class="cart-remove">
                                         <i class="fas fa-times"></i>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="cart__sumary">
                                 <div class="cart__sumary-items">
-                                    <span>3 items</span>
+                                    <span class="cart__sumary-count">3 items</span>
                                     <span class="cart__items-price">€894.65</span>
                                 </div>
                                 <div class="cart__sumary-ship">
@@ -315,7 +125,7 @@
                             </div>
                             <div class="cart__total">
                                 <span>Total</span>
-                                <span class="cart__ship-price">€879.65</span>
+                                <span class="cart__total-price">€879.65</span>
                             </div>
                             <div class="cart__view">
                                 <a href="Cart.html" class="button button-gb">View Cart</a>

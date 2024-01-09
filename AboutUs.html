@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/home.css">
     <link rel="stylesheet" href="./assets/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="./assets/css/home.css">
-    <link rel="stylesheet" href="./assets/css/account.css">
+    <link rel="stylesheet" href="./assets/css/aboutUs.css"/>
 </head>
 <body>
     <div id="navbar" class="navbar">
@@ -16,14 +16,14 @@
             <i class="fas fa-times navbar__close"></i>
             <span>Menu</span>
         </div>
-        <ul class="navbar__menu">
+        <div class="navbar__menu">
             <a href="index.html" class="navbar-item">Home</a>
             <a href="Products.html" class="navbar-item">Men Watches</a>
             <a href="Products.html" class="navbar-item">Womem Watches</a>
             <a href="Products.html" class="navbar-item">Sport Watches</a>
             <a href="Products.html" class="navbar-item">Luxury Watches</a>
-            <a href="#" class="navbar-item">About Us</a>
-        </ul>
+            <a href="AboutUs.html" class="navbar-item">About Us</a>
+        </div>
     </div>
     <div id="overlay"></div>
     <header id="header">
@@ -38,7 +38,7 @@
                 <div class="header__search">
                     <div class="header__search__container">
                         <form action="#" method="get">
-                            <input type="text" name="search" value="" placeholder="Search our catalog" autocomplete="off" class="search__input">
+                            <input type="text" name="search" placeholder="Search our catalog" autocomplete="off" class="search__input">
                             <button type="submit" class="search__btn">
                                 <i class="fas fa-search"></i>
                             </button>
@@ -65,12 +65,12 @@
                         </div>
                         <div class="cart__dropdown">
                             <div class="cart__scroll">
-                                <div class="cart__item flex">
-                                    <a href="#" class="cart-img">
+                                <!-- <div class="cart__item flex">
+                                    <a href="DetailProduct.html" class="cart-img">
                                         <img src="./assets/image/suunto-spartan-trainer-wrist-hr-black-techwear-1.png" alt="">
                                     </a>
                                     <div class="cart-info">
-                                        <a href="#"class="cart-name">Suunto Spartan Trainer Wrist HR Black</a>
+                                        <a href="DetailProduct.html"class="cart-name">Suunto Spartan Trainer Wrist HR Black</a>
                                         <p class="cart-price">€171.55</p>
                                         <p class="cart-qty">
                                             Quantity: 
@@ -82,11 +82,11 @@
                                     </div>
                                 </div>
                                 <div class="cart__item flex">
-                                    <a href="#" class="cart-img">
+                                    <a href="DetailProduct.html"  class="cart-img">
                                         <img src="./assets/image/suunto-9-peak-granite-blue-titanium-1.png" alt="">
                                     </a>
                                     <div class="cart-info">
-                                        <a href="#"class="cart-name">Suunto Spartan Trainer Wrist HR Black</a>
+                                        <a href="DetailProduct.html" class="cart-name">Suunto Spartan Trainer Wrist HR Black</a>
                                         <p class="cart-price">€477.30</p>
                                         <p class="cart-qty">
                                             Quantity: 
@@ -98,11 +98,11 @@
                                     </div>
                                 </div>
                                 <div class="cart__item flex">
-                                    <a href="#" class="cart-img">
+                                    <a href="DetailProduct.html"  class="cart-img">
                                         <img src="./assets/image/archetype-nemesis-automatic-1.png" alt="">
                                     </a>
                                     <div class="cart-info">
-                                        <a href="#"class="cart-name">Suunto Spartan Trainer Wrist HR Black</a>
+                                        <a href="DetailProduct.html" class="cart-name">Suunto Spartan Trainer Wrist HR Black</a>
                                         <p class="cart-price">€245.80</p>
                                         <p class="cart-qty">
                                             Quantity: 
@@ -112,11 +112,11 @@
                                     <div class="cart-remove">
                                         <i class="fas fa-times"></i>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="cart__sumary">
                                 <div class="cart__sumary-items">
-                                    <span>3 items</span>
+                                    <span class="cart__sumary-count">3 items</span>
                                     <span class="cart__items-price">€894.65</span>
                                 </div>
                                 <div class="cart__sumary-ship">
@@ -126,10 +126,10 @@
                             </div>
                             <div class="cart__total">
                                 <span>Total</span>
-                                <span class="cart__ship-price">€879.65</span>
+                                <span class="cart__total-price">€879.65</span>
                             </div>
                             <div class="cart__view">
-                                <a href="#" class="button button-gb">View Cart</a>
+                                <a href="Cart.html" class="button button-gb">View Cart</a>
                             </div>
                         </div>
                     </div>
@@ -140,11 +140,11 @@
                         <div class="account__dropdown">
                             <div class="account__list">
                                 <p class="account__name">Phạm Duy Đạt</p>
-                                <a href="#" class="account-item">
+                                <a href="SignUp.html" class="account-item">
                                     <i class="fas fa-user-plus"></i>
                                     Sign Up
                                 </a>
-                                <a href="#" class="account-item">
+                                <a href="SignIn.html" class="account-item">
                                     <i class="fas fa-sign-in-alt"></i>
                                     Sign In
                                 </a>
@@ -160,7 +160,7 @@
                                     <i class="fas fa-cog"></i>
                                     Setting
                                 </a>
-                                <a href="#" class="account-item">
+                                <a href="manager.html" class="account-item">
                                     <i class="fas fa-user-cog"></i>
                                     Manager
                                 </a>
@@ -189,7 +189,7 @@
                         <a href="Products.html" class="menu__link">Luxury watches</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#" class="menu__link">About us</a>
+                        <a href="AboutUs.html" class="menu__link">About us</a>
                     </li>
                 </ul>
             </div>
@@ -216,93 +216,69 @@
                         </div>
                     </div>
                     <div class="col-9 col-md-12 pd-gap">
-                        <div class="column-right">
-                            <div class="signup__container">
-                                <h2 class="section-title">Create An Account</h2>
-                                <form action="#" method="post" class="sign-form" onsubmit="return validateSignUp()">
-                                    <div class="form-group">
-                                        <div class="flex ai-center">
-                                            <label class="form-label required-input">First name</label>
-                                            <div class="form-input-box">
-                                                <input class="form-control" name="firstname" id="firstname"  type="text">
-                                            </div>
+                        <h2>About us</h2>
+                        <div class="categories__slider"> 
+                            <section id="content" class="Login_form">
+                               
+                                    
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-4">
+                                        <div class="cms-block">
+                                        <h3 class="page-subheading">Dear Customer</h3>
+                                         <p class="dark">Watch store was founded by Hans Wilsdorf and Alfred Davis in London, England in 1905, then in 1919,
+                                            Rolex moved all operations, as well as watch production facilities to Geneva Switzerland.</p>
+                                         <p class="inner">First, the Watch store team would like to express our deep gratitude to our customers who have always accompanied and trusted us during the past time. It is your support and love that has helped  Watch store achieve the success it is today and also the motivation for us to continue to strive in the future.
+
+                                            We hope that products from Watch store will accompany our customers, share fully the happy moments in life, succeed in career as well as enjoy every meaningful moment with loved ones and family. family.
+                                            
+                                            Besides the path of pursuing perfection, shortcomings are inevitable in business, if in the process of serving there is anything that bothers you, we would like to ask for your understanding.  Watch store will always sincerely listen to your feedback to improve services, increase engagement, and provide the best shopping experience.
+                                            
+                                            Best regards,</p>
+                                            <br>
+                                            <img src="https://media-exp1.licdn.com/dms/image/C5112AQEfptQtGhQJzg/article-cover_image-shrink_600_2000/0/1520153249908?e=1653523200&v=beta&t=V9rvc4J0FCMpECfyR14oO_GlW1wbMTyH5RBVy17Lnnw">
+                                           </div>
+                                           <div class="cms-block">
+                                            <h3 class="page-subheading">Story about Watch Store</h3>
+                                            <p class="dark">At the beginning, we realized that the watch market in Vietnam still had many limitations in terms of models, brands, high prices and most importantly, the product origin was not guaranteed.</p>
+                                            <p class="inner"> In addition, showrooms and watch shops at that time only operated in the traditional way with available old models, depending heavily on the geography of each province. Customers do not have many choices and benefits are not guaranteed.
+
+                                                Watch store was established with the purpose of redefining the aging market, trying to bring a lot of choices, good quality products, reputable brands with comprehensive warranty policy, providing absolute peace of mind. when shopping for customers. And above all, bringing world-class watch masterpieces closer to Vietnamese consumers, helping customers own genuine products at a good price.
+                                                
+                                                Currently,  Watch store is proud to become one of the leading prestigious and professional genuine watch distribution systems in Vietnam with more than 40 world-renowned brands.</p>
+                                               </div>
+                                               <div class="cms-block"> 
+                                                <h3 class="page-subheading">Service Motto:</h3>
+                                                <p class="inner">Through a team of dedicated and objective consultants, helping customers feel secure about owning genuine quality products with guaranteed quality, dedicated after-sales service with good discounts.
+                                        
+                                                    Continuing to improve, becoming a genuine watch distribution system with a diverse product portfolio and brands. As a result, LikeWatch's customers can easily compare and choose products that are suitable for their personality, purpose, and style.</p>
+                                                 <br> 
+                                                    <img src="https://luxshopping.vn/Uploads/UserFiles/images/banner%20dong%20ho%20frederique%20constaint.png">
+                                                 </div>
+                                                 <div class="cms-block">
+                                                   <h3 class="page-subheading">Commitment in business</h3>
+                                                   <p class="dark">Watch store is committed to selling only genuine products from world-class, quality brands, imported from genuine distribution centers from the US and Europe.</p>
+                                                    <p class="inner">
+                                                       
+                                                        
+                                                        - 100% new product, in original box, catalog, warranty card, user manual and all accessories provided by the company for that product line.
+                                                        <br>
+                                                        - Commitment to global warranty policy as prescribed by each brand.
+                                                        <br>
+                                                        - Always deploying many incentive programs so that customers can easily own their favorite products and brands at the best discounted prices.
+                                                        <br>
+                                                        - Improve service quality by improving the knowledge and skills of the consultant team, putting the customer's shopping experience and after-sales policy first.
+                                                     </p>
+                                                     </div>
+                                                     <div align="center">
+                                                     <p class= "dark">Thank you for everything!</p>
                                         </div>
-                                        <div class="flex">
-                                            <div class="form-label"></div>
-                                            <span class="form-error" id="firstname_error"></span>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="flex ai-center">
-                                            <label class="form-label">Last name</label>
-                                            <div class="form-input-box">
-                                                <input class="form-control" name="lastname" id="lastname" type="text">
-                                            </div>
                                         </div>
-                                        <div class="flex">
-                                            <div class="form-label"></div>
-                                            <span class="form-error" id="lastname_error"></span>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="flex ai-center">
-                                            <label class="form-label">Email</label>
-                                            <div class="form-input-box">
-                                                <input class="form-control" name="email" id="email" type="text">
-                                            </div>
-                                        </div>
-                                        <div class="flex">
-                                            <div class="form-label"></div>
-                                            <span class="form-error" id="email_error"></span>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="flex ai-center">
-                                            <label class="form-label">Password</label>
-                                            <div class="form-input-box">
-                                                <div class="form-input-password">
-                                                    <input class="form-control form-control-password" name="password"  type="password" id="password" autocomplete="new-password">
-                                                    <span class="form-password-btn">
-                                                        <i class="fas fa-eye"></i>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex">
-                                            <div class="form-label"></div>
-                                            <span class="form-error" id="password_error"></span>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="flex ai-center">
-                                            <label class="form-label">Birthdate</label>
-                                            <div class="form-input-box">
-                                                <input class="form-control" name="birthdate" type="date" id="birthdate">
-                                            </div>
-                                        </div>
-                                        <div class="flex">
-                                            <div class="form-label"></div>
-                                            <span class="form-error" id="birthdate_error"></span>
-                                        </div>
-                                    </div>
-                                    <div class="form-group social-group">
-                                        <div class="flex ai-center">
-                                            <label class="form-label">Social title</label>
-                                            <div class="form-input-box">
-                                                <input class="form-social" name="social" 
-                                                id="social-male" type="radio" value="male" checked>
-                                                <label for="social-male"> Mr</label>
-                                                <input class="form-social" name="social" 
-                                                id="social-female" type="radio" value="female">
-                                                <label for="social-female"> Mrs</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p class="form-text-top">Already have an account? <a href="SignIn.html" class="form-link">Log in instead!</a></p>
-                                    <button type="submit" name="signup" value="signup" class="button button-gb sign-btn">Save</button>
-                                    <p class="form-text-bottom">Have a good day <3</p>
-                                </form>
-                            </div>
+                               
+                               
+                            
+
+                                </section>
                         </div>
                     </div>
                 </div>
@@ -357,7 +333,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="footer__link">
+                                    <a href="Products.html" class="footer__link">
                                         <i class="fas fa-angle-right"></i>
                                         <span>New product</span>
                                     </a>
@@ -409,7 +385,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="footer__link">
+                                    <a href="AboutUs.html" class="footer__link">
                                         <i class="fas fa-angle-right"></i>
                                         <span>About us</span>
                                     </a>
@@ -482,6 +458,5 @@
 
     <script src="./assets/javascript/swiper-bundle.min.js"></script>
     <script src="./assets/javascript/main.js"></script>
-    <script src="./assets/javascript/account.js"></script>
 </body>
 </html>
